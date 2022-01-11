@@ -23,6 +23,7 @@ class BookNow(models.Model):
     phone = models.CharField(max_length=15)
     email = models.EmailField(verbose_name='ИМАИЛ')
     sightseeing = models.ForeignKey(Sight, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(default=1)
 
 
 
