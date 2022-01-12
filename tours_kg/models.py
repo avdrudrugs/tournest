@@ -6,6 +6,11 @@ class Region(models.Model):
     def __str__(self):
         return self.reg_name
 
+    class Meta:
+        verbose_name = 'Область'
+        verbose_name_plural = 'Область'
+
+
 
 class Sight(models.Model):
     sight_name = models.CharField(max_length=50, verbose_name='Достопримечательность')
@@ -17,6 +22,10 @@ class Sight(models.Model):
     def __str__(self):
         return self.province
 
+    class Meta:
+        verbose_name = 'Достопримечательность'
+        verbose_name_plural = 'Достопримечательность'
+
 
 class BookNow(models.Model):
     name = models.CharField(max_length=30, verbose_name='Ваше имя')
@@ -26,6 +35,9 @@ class BookNow(models.Model):
     sightseeing = models.ForeignKey(Sight, on_delete=models.CASCADE, verbose_name='Тур')
     quantity = models.PositiveIntegerField(default=1, verbose_name='Количество забронированных туров')
 
+    class Meta:
+        verbose_name = 'Забронировать'
+        verbose_name_plural = 'Забронировать'
 
 
 
