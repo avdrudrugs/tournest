@@ -30,7 +30,7 @@ class Sight(models.Model):
 class BookNow(models.Model):
     name = models.CharField(max_length=30, verbose_name='Ваше имя')
     surname = models.CharField(max_length=30, verbose_name='Ваша фамилия')
-    phone = models.CharField(max_length=15, verbose_name='Ваш номер телефона')
+    phone = models.CharField(max_length=20, verbose_name='Ваш номер телефона')
     email = models.EmailField(verbose_name='Ваша почта')
     sightseeing = models.ForeignKey(Sight, on_delete=models.CASCADE, verbose_name='Тур')
     quantity = models.PositiveIntegerField(default=1, verbose_name='Количество забронированных туров')
@@ -40,6 +40,10 @@ class BookNow(models.Model):
         verbose_name_plural = 'Забронировать'
 
 
+class Users(models.Model):
+    username = models.CharField(max_length=70, verbose_name='Как к вам обращаться?')
+    user_phone = models.CharField(max_length=20, verbose_name='Ваш номер телефона')
+    orders = models.ManyToManyField(BookNow, verbose_name='Ваши брони', related_name='related orders')
 
 
 
