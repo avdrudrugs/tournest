@@ -12,7 +12,7 @@ class BookNowForm(forms.ModelForm):
     class Meta:
         model = BookNow
         fields = (
-            'name', 'surname', 'phone', 'quantity'
+            'name', 'surname', 'phone', 'quantity', 'date'
         )
 
 
@@ -86,3 +86,12 @@ class RegistrationForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ['username', 'password', 'confirm_pass', 'first_name', 'last_name', 'phone', 'email']
+
+
+class JoinUs(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(self, *args, **kwargs)
+
+        class Meta:
+            model = JoinUs
+            fields = 'email'
