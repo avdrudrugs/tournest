@@ -48,8 +48,8 @@ class BookNow(models.Model):
     date = models.DateTimeField(auto_now=False, verbose_name='Дата бронирования')
 
     class Meta:
-        verbose_name = 'Бронирование'
-        verbose_name_plural = 'Забронировать'
+        verbose_name = 'Бронь'
+        verbose_name_plural = 'Брони'
 
 
 class Users(models.Model):
@@ -64,6 +64,10 @@ class Users(models.Model):
 
 class JoinUs(models.Model):
     email = models.EmailField(verbose_name='Введите вашу почту')
+
+    class Meta:
+        verbose_name = 'Присоединяйся к нам'
+        verbose_name_plural = 'Подключенные'
 
 
 class Review(models.Model):

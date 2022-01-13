@@ -1,12 +1,8 @@
 from django.shortcuts import render
-from django.views import View
 from django.db.models import Q
-from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.contrib.auth import login, authenticate
 from django.views.generic import DetailView, View
-from django.contrib.auth.mixins import LoginRequiredMixin
-from tours_kg.mixins import BookMixin
 from tours_kg.models import *
 from tours_kg.forms import LoginForm, BookNowForm, RegistrationForm
 
@@ -15,7 +11,7 @@ class MyQ(Q):
     default = 'OR'
 
 
-class BaseView(BookMixin, View):
+class BaseView(View):
     def get(self, request, *args, **kwargs):
         regions = Region.objects.all()
         sights = Sight.objects.all()
@@ -26,7 +22,7 @@ class BaseView(BookMixin, View):
         }
         return render(request, 'index.html', context)
 
-class RegistrationView(BookMixin, View):
+class RegistrationView(View):
     def get(self, request, *args, **kwargs):
         form = RegistrationForm(request.POST or None)
         regions = Region.objects.all()
