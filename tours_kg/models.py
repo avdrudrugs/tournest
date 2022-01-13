@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 
+
 class Region(models.Model):
     reg_name = models.CharField(max_length=30)
     slug = models.SlugField(unique=True)
@@ -15,9 +16,6 @@ class Region(models.Model):
     class Meta:
         verbose_name = 'Область'
         verbose_name_plural = 'Область'
-
-
-
 
 
 class Sight(models.Model):
@@ -42,14 +40,12 @@ class Sight(models.Model):
 class BookNow(models.Model):
     name = models.CharField(max_length=30, verbose_name='Ваше имя')
     surname = models.CharField(max_length=30, verbose_name='Ваша фамилия')
-    phone = models.CharField(max_length=20, verbose_name='Ваш номер телефона')
+    phone = models.CharField(max_length=15, verbose_name='Ваш номер телефона')
     email = models.EmailField(verbose_name='Ваша почта')
     sightseeing = models.ForeignKey(Sight, on_delete=models.CASCADE, verbose_name='Тур')
     quantity = models.PositiveIntegerField(default=1, verbose_name='Количество забронированых туров')
     for_anonymous_user = models.BooleanField(default=False)
     date = models.DateTimeField(auto_now=False, verbose_name='Дата бронирования')
-
-
 
     class Meta:
         verbose_name = 'Бронирование'
@@ -76,4 +72,5 @@ class Review(models.Model):
     class Meta:
         verbose_name = 'Отзывы'
         verbose_name_plural = 'Отзыв'
+
 
