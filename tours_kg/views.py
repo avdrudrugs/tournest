@@ -2,9 +2,9 @@ from django.shortcuts import render
 from django.db.models import Q
 from django.http import HttpResponseRedirect
 from django.contrib.auth import login, authenticate
-from django.views.generic import DetailView, View
+from django.views.generic import View
 from tours_kg.models import *
-from tours_kg.forms import LoginForm, BookNowForm, RegistrationForm
+from tours_kg.forms import RegistrationForm
 
 
 class MyQ(Q):

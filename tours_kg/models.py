@@ -27,7 +27,7 @@ class Sight(models.Model):
     slug = models.SlugField(unique=True)
 
     def __str__(self):
-        return self.province, self.sight_name
+        return self.sight_name
 
     def get_absolute_url(self):
         return reverse('province_detail', kwargs={'slug': self.slug})
@@ -72,6 +72,8 @@ class JoinUs(models.Model):
 
 class Review(models.Model):
     reviews = models.CharField(max_length=1000, verbose_name='Отзыв')
+    user = models.CharField(max_length=30, verbose_name='Имя пользователя')
+
 
     class Meta:
         verbose_name = 'Отзывы'
