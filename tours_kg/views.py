@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.contrib.auth import login, authenticate
 from django.views.generic import DetailView, View
-from tours_kg.mixins import BookMixin
+# from tours_kg.mixins import BookMixin
 from tours_kg.models import *
 from tours_kg.forms import LoginForm, BookNowForm, RegistrationForm
 
@@ -14,26 +14,31 @@ class MyQ(Q):
     default = 'OR'
 
 
-class BaseView(BookMixin, View):
+class BaseView( View):
     def get(self, request, *args, **kwargs):
         regions = Region.objects.all()
         sights = Sight.objects.all()
         context = {
             'regions': regions,
             'sights': sights,
-            'books': self.books
+
         }
         return render(request, 'index.html', context)
 
 
-class RegistrationView(BookMixin, View):
+class BookView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'book.html')
+
+
+class RegistrationView(View):
     def get(self, request, *args, **kwargs):
         form = RegistrationForm(request.POST or None)
         regions = Region.objects.all()
         context = {
             'form': form,
             'regions': regions,
-            'books':self.books
+            'books': self.books
         }
         return render(request, 'index.html', context)
 
@@ -58,12 +63,8 @@ class RegistrationView(BookMixin, View):
             return HttpResponseRedirect('/')
         regions = Region.objects.all()
         context = {
-            'form':form,
+            'form': form,
             'regions': regions,
-            'books':self.books
+            'books': self.books
         }
         return render(request, 'index.html', context)
-
-
-
-

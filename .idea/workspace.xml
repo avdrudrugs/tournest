@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8eb2ea1b-ef89-4a5f-a6c6-2c092a1d2437" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tours_kg/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tours_kg/mixins.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tournest/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tournest/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/mixins.py" beforeDir="false" afterPath="$PROJECT_DIR$/tours_kg/mixins.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tours_kg/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tours_kg/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tours_kg/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tours_kg/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tours_kg/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tours_kg/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
