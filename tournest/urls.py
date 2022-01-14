@@ -22,7 +22,6 @@ urlpatterns = [
     path('', include('tours_kg.urls')),
 ]
 
-
 from django.conf.urls.static import static
 
 if settings.DEBUG:

@@ -26,14 +26,14 @@ class Sight(models.Model):
     slug = models.SlugField(unique=True)
 
     def __str__(self):
-        return self.province, self.sight_name
+        return self.sight_name
 
     def get_absolute_url(self):
         return reverse('province_detail', kwargs={'slug': self.slug})
 
     class Meta:
         verbose_name = 'Достопримечательность'
-        verbose_name_plural = 'Достопримечательность'
+        verbose_name_plural = 'Достопримечательности'
 
 
 class BookNow(models.Model):
@@ -47,8 +47,8 @@ class BookNow(models.Model):
     date = models.DateTimeField(auto_now_add=False, null=True, verbose_name='Дата бронирования')
 
     class Meta:
-        verbose_name = 'Бронирование'
-        verbose_name_plural = 'Забронировать'
+        verbose_name = 'Бронь'
+        verbose_name_plural = 'Брони'
 
 
 class Users(models.Model):
@@ -63,6 +63,10 @@ class Users(models.Model):
 
 class JoinUs(models.Model):
     email = models.EmailField(verbose_name='Введите вашу почту')
+
+    class Meta:
+        verbose_name = 'Присоединяйся к нам'
+        verbose_name_plural = 'Подключенные'
 
 
 class Review(models.Model):
