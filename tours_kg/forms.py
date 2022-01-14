@@ -12,7 +12,7 @@ class BookNowForm(forms.ModelForm):
     class Meta:
         model = BookNow
         fields = (
-            'name', 'surname', 'phone', 'quantity', 'date'
+            'name', 'surname', 'phone', 'quantity', 'email', 'sightseeing', 'date', 'quantity'
         )
 
 

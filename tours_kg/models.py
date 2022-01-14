@@ -42,7 +42,7 @@ class BookNow(models.Model):
     phone = models.CharField(max_length=15, verbose_name='Ваш номер телефона')
     email = models.EmailField(verbose_name='Ваша почта')
     sightseeing = models.ForeignKey(Sight, on_delete=models.CASCADE, verbose_name='Тур')
-    quantity = models.PositiveIntegerField(default=1, verbose_name='Количество забронированых туров')
+    quantity = models.PositiveIntegerField(default=0, verbose_name='Количество забронированых туров')
     date = models.DateTimeField(auto_now=False, verbose_name='Дата бронирования')
 
     class Meta:
