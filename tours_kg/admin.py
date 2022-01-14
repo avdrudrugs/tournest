@@ -1,6 +1,5 @@
-
 from django.contrib import admin
-from .models import *
+from .models import Region, Sight, Users, JoinUs, Review, BookNow
 
 admin.site.register(Region)
 admin.site.register(Sight)

@@ -59,9 +59,7 @@
     <script src="{% static 'https://oss.maxcdn.com/respond/1.4.2/respond.min.js' %} "></script>
     <![endif]-->
 
-    <style>
-        header {background: url(static/images/home/banner.jpg); }
-    </style>
+
 </head>
 
 <body>
@@ -98,11 +96,10 @@
                                 <li class="smooth-menu"><a href="#gallery">Точка назначения </a></li>
                                 <li class="smooth-menu"><a href="#pack">Туры </a></li>
                                 <li class="smooth-menu"><a href="#blog">Блог</a></li>
-                                <li class="smooth-menu"><a href="#subs">Подписка</a></li>
                                 <li>
                                     <a class="nav-link text-white" href="{% url 'book_now' %}">Забронировать</a>
                                 </li><!--/.project-btn-->
-                            </ul>
+                           </ul>
                         </div><!-- /.navbar-collapse -->
                     </div><!-- /.main-menu-->
                 </div><!-- /.col-->
@@ -147,214 +144,6 @@
 </section><!--/.about-us-->
 <!--about-us end -->
 
-<!--travel-box start-->
-<section class="travel-box">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="single-travel-boxes">
-                    <div id="desc-tabs" class="desc-tabs">
-
-                        <ul class="nav nav-tabs" role="tablist">
-
-                            <li role="presentation" class="active">
-                                <a href="#tours" aria-controls="tours" role="tab" data-toggle="tab">
-                                    <i class="fa fa-tree"></i>
-                                    tours
-                                </a>
-                            </li>
-
-                        </ul>
-
-                        <!-- Tab panes -->
-                        <div class="tab-content">
-
-                            <div role="tabpanel" class="tab-pane active fade in" id="tours">
-                                <div class="tab-para">
-
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-12">
-                                            <div class="single-tab-select-box">
-
-                                                <h2>Точка назначения</h2>
-
-                                                <div class="travel-select-icon">
-                                                    <select class="form-control ">
-
-                                                        <option value="default">Где вы хотите по путишествовать?</option>
-                                                        <!-- /.option-->
-
-                                                        <option value="turkey">Сары-Челек</option><!-- /.option-->
-
-                                                        <option value="russia">Ыссык-Куль</option><!-- /.option-->
-                                                        <option value="egept">Ара-Коль</option><!-- /.option-->
-
-                                                    </select><!-- /.select-->
-                                                </div><!-- /.travel-select-icon -->
-
-
-                                            </div><!--/.single-tab-select-box-->
-                                        </div><!--/.col-->
-
-                                        <div class="col-lg-2 col-md-3 col-sm-4">
-                                            <div class="single-tab-select-box">
-                                                <h2>Дата старта</h2>
-                                                <div class="travel-check-icon">
-                                                    <form action="#">
-                                                        <input type="text" name="check_in" class="form-control"
-                                                               data-toggle="datepicker" placeholder="12 -01 - 2022 ">
-                                                    </form>
-                                                </div><!-- /.travel-check-icon -->
-                                            </div><!--/.single-tab-select-box-->
-                                        </div><!--/.col-->
-
-                                        <div class="col-lg-2 col-md-3 col-sm-4">
-                                            <div class="single-tab-select-box">
-                                                <h2>Дата окончания</h2>
-                                                <div class="travel-check-icon">
-                                                    <form action="#">
-                                                        <input type="text" name="check_out" class="form-control"
-                                                               data-toggle="datepicker" placeholder="22 -01 - 2022 ">
-                                                    </form>
-                                                </div><!-- /.travel-check-icon -->
-                                            </div><!--/.single-tab-select-box-->
-                                        </div><!--/.col-->
-
-                                        <div class="col-lg-2 col-md-1 col-sm-4">
-                                            <div class="single-tab-select-box">
-                                                <h2>Прод-ть</h2>
-                                                <div class="travel-select-icon">
-                                                    <select class="form-control ">
-
-                                                        <option value="default">5</option><!-- /.option-->
-
-                                                        <option value="10">10</option><!-- /.option-->
-
-                                                        <option value="15">15</option><!-- /.option-->
-                                                        <option value="20">20</option><!-- /.option-->
-
-                                                    </select><!-- /.select-->
-                                                </div><!-- /.travel-select-icon -->
-                                            </div><!--/.single-tab-select-box-->
-                                        </div><!--/.col-->
-
-                                        <div class="col-lg-2 col-md-1 col-sm-4">
-                                            <div class="single-tab-select-box">
-                                                <h2>Уч-ки</h2>
-                                                <div class="travel-select-icon">
-                                                    <select class="form-control ">
-
-                                                        <option value="default">1</option><!-- /.option-->
-                                                        <option value="2">2</option><!-- /.option-->
-                                                        <option value="default">3</option><!-- /.option-->
-                                                        <option value="4">4</option><!-- /.option-->
-                                                        <option value="default">5</option><!-- /.option-->
-                                                        <option value="default">6</option><!-- /.option-->
-                                                        <option value="default">7</option><!-- /.option-->
-                                                        <option value="8">8</option><!-- /.option-->
-
-                                                    </select><!-- /.select-->
-                                                </div><!-- /.travel-select-icon -->
-                                            </div><!--/.single-tab-select-box-->
-                                        </div><!--/.col-->
-
-                                    </div><!--/.row-->
-
-                                    <div class="row">
-                                        <div class="col-sm-5">
-                                            <div class="travel-budget">
-                                                <div class="row">
-                                                    <div class="col-md-3 col-sm-4">
-                                                        <h3>Бюджет: </h3>
-                                                    </div><!--/.col-->
-                                                    <div class="co-md-9 col-sm-8">
-                                                        <div class="travel-filter">
-                                                            <div class="info_widget">
-                                                                <div class="price_filter">
-
-                                                                    <div id="slider-range"></div><!--/.slider-range-->
-
-                                                                    <div class="price_slider_amount">
-                                                                        <input type="text" id="amount" name="price"
-                                                                               placeholder="Add Your Price"/>
-                                                                    </div><!--/.price_slider_amount-->
-                                                                </div><!--/.price-filter-->
-                                                            </div><!--/.info_widget-->
-                                                        </div><!--/.travel-filter-->
-                                                    </div><!--/.col-->
-                                                </div><!--/.row-->
-                                            </div><!--/.travel-budget-->
-                                        </div><!--/.col-->
-                                        <div class="clo-sm-7">
-                                            <div class="about-btn travel-mrt-0 pull-right">
-                                                <button class="about-view travel-btn">
-                                                    Искать
-                                                </button><!--/.travel-btn-->
-                                            </div><!--/.about-btn-->
-                                        </div><!--/.col-->
-
-                                    </div><!--/.row-->
-
-                                </div><!--/.tab-para-->
-
-                            </div><!--/.tabpannel-->
-
-                            <div role="tabpanel" class="tab-pane fade in" id="hotels">
-                                <div class="tab-para">
-
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-12">
-                                            <div class="single-tab-select-box">
-
-                                                <h2>destination</h2>
-
-                                                <div class="travel-select-icon">
-                                                    <select class="form-control ">
-
-                                                        <option value="default">enter your destination country</option>
-                                                        <!-- /.option-->
-
-                                                        <option value="turkey">turkey</option><!-- /.option-->
-
-                                                        <option value="russia">russia</option><!-- /.option-->
-                                                        <option value="egept">egypt</option><!-- /.option-->
-
-                                                    </select><!-- /.select-->
-                                                </div><!-- /.travel-select-icon -->
-
-                                                <div class="travel-select-icon">
-                                                    <select class="form-control ">
-
-                                                        <option value="default">enter your destination location</option>
-                                                        <!-- /.option-->
-
-                                                        <option value="istambul">istambul</option><!-- /.option-->
-
-                                                        <option value="mosko">mosko</option><!-- /.option-->
-                                                        <option value="cairo">cairo</option><!-- /.option-->
-
-                                                    </select><!-- /.select-->
-                                                </div><!-- /.travel-select-icon -->
-
-                                            </div><!--/.single-tab-select-box-->
-                                        </div><!--/.col-->
-
-
-                                    </div><!--/.row-->
-
-                                </div>
-
-                            </div><!--/.tabpannel-->
-
-                        </div><!--/.tab content-->
-                    </div><!--/.desc-tabs-->
-                </div><!--/.single-travel-box-->
-            </div><!--/.col-->
-        </div><!--/.row-->
-    </div><!--/.container-->
-
-</section><!--/.travel-box-->
-<!--travel-box end-->
 
 <!--service start-->
 <section id="service" class="service">
@@ -436,72 +225,66 @@
 
                             <div class="col-md-6">
                                 <div class="filtr-item">
-                                    <img src="static/images/gallary/bashnya-burana.jpg" alt="portfolio image"/>
+                                    <img src="static/images/gallary/alamedini.jpg" alt="portfolio image"/>
                                     <div class="item-title">
                                         <a href="#">
-                                            Бурана
+                                            Аламединское ущелье
                                         </a>
-                                        <p><span>20 туров</span><span>15 мест</span></p>
                                     </div><!-- /.item-title -->
                                 </div><!-- /.filtr-item -->
                             </div><!-- /.col -->
 
                             <div class="col-md-6">
                                 <div class="filtr-item">
-                                    <img src="static/images/gallary/ushchele-altyn-arashan.jpg" alt="portfolio image"/>
+                                    <img src="static/images/gallary/sarychelek.jpg" alt="portfolio image"/>
                                     <div class="item-title">
                                         <a href="#">
-                                            Алтын Арашан
+                                            Сары-Челек
                                         </a>
-                                        <p><span>12 туров</span><span>9 мест</span></p>
                                     </div> <!-- /.item-title-->
                                 </div><!-- /.filtr-item -->
                             </div><!-- /.col -->
 
                             <div class="col-md-4">
                                 <div class="filtr-item">
-                                    <img src="static/images/gallary/Kyrgyzstan-Turizm-ZHai-loo-Loshadi.jpg" alt="portfolio image"/>
+                                    <img src="static/images/gallary/burana.jpg" alt="portfolio image"/>
                                     <div class="item-title">
                                         <a href="#">
-                                            Жайлоо
+                                            Бурана
                                         </a>
-                                        <p><span>25 туров</span><span>10 мест</span></p>
                                     </div><!-- /.item-title -->
                                 </div><!-- /.filtr-item -->
                             </div><!-- /.col -->
 
                             <div class="col-md-4">
                                 <div class="filtr-item">
-                                    <img src="static/images/gallary/ik1200.jpeg" alt="portfolio image"/>
+                                    <img src="static/images/gallary/belogorka.png" alt="portfolio image"/>
                                     <div class="item-title">
                                         <a href="#">
-                                            Ыссык-Куль
+                                            Белогорка
                                         </a>
-                                        <p><span>18 туров</span><span>9 мест</span></p>
                                     </div> <!-- /.item-title-->
                                 </div><!-- /.filtr-item -->
                             </div><!-- /.col -->
 
                             <div class="col-md-4">
                                 <div class="filtr-item">
-                                    <img src="static/images/gallary/1200onemore.jpg" alt="portfolio image"/>
+                                    <img src="static/images/gallary/kegeti.jpg" alt="portfolio image"/>
                                     <div class="item-title">
                                         <a href="#">
-                                            Конный тур
+                                            Кегети
                                         </a>
-                                        <p><span>14 туров</span><span>12 мест</span></p>
                                     </div> <!-- /.item-title-->
                                 </div><!-- /.filtr-item -->
                             </div><!-- /.col -->
 
                             <div class="col-md-8">
                                 <div class="filtr-item">
-                                    <img src="static/images/gallary/tour.jpg" alt="portfolio image"/>
+                                    <img src="static/images/gallary/arakol.jpg" alt="portfolio image"/>
                                     <div class="item-title">
                                         <a href="#">
-                                            Асман жайлоо
+                                            Ара-Кол
                                         </a>
-                                        <p><span>14 туров</span><span>6 мест</span></p>
                                     </div> <!-- /.item-title-->
                                 </div><!-- /.filtr-item -->
                             </div><!-- /.col -->
@@ -538,13 +321,13 @@
 
                 <div class="col-md-4 col-sm-6">
                     <div class="single-package-item">
-                        <img src="static/images/packages/gorno-base1.png" alt="package-place">
+                        <img src="static/images/packages/issyk-kul-north1.jpg" alt="package-place">
                         <div class="single-package-item-txt">
-                            <h3>Сары-Челек <span class="pull-right">$199</span></h3>
+                            <h3>Ара-Кол <span class="pull-right">2000</span></h3>
                             <div class="packages-para">
                                 <p>
 											<span>
-												<i class="fa fa-angle-right"></i> 5 дней 6 ночей
+												<i class="fa fa-angle-right"></i> 5 дней
 											</span>
                                     <i class="fa fa-angle-right"></i> 5 star
                                 </p>
@@ -562,7 +345,7 @@
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
-                                    <span>2544 review</span>
+                                    <span>45 отзывов</span>
                                 </p>
                             </div><!--/.packages-review-->
                             <div class="about-btn">
@@ -577,15 +360,15 @@
 
                 <div class="col-md-4 col-sm-6">
                     <div class="single-package-item">
-                        <img src="static/images/packages/gorno-base1.png" alt="package-place">
+                        <img src="static/images/packages/issyk-kul-north1.jpg" alt="package-place">
                         <div class="single-package-item-txt">
-                            <h3>Горнолыжная база <span class="pull-right">$499</span></h3>
+                            <h3>Горнолыжная база <span class="pull-right">$89</span></h3>
                             <div class="packages-para">
                                 <p>
 											<span>
-												<i class="fa fa-angle-right"></i> 3 дня 4 ночей
+												<i class="fa fa-angle-right"></i> 3 дня
 											</span>
-                                    <i class="fa fa-angle-right"></i> 5 star
+                                    <i class="fa fa-angle-right"></i> 5
                                 </p>
                                 <p>
 											<span>
@@ -601,7 +384,7 @@
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
-                                    <span>2544 review</span>
+                                    <span>4 отзывов</span>
                                 </p>
                             </div><!--/.packages-review-->
                             <div class="about-btn">
@@ -618,12 +401,12 @@
                     <div class="single-package-item">
                         <img src="/static/images/issyk-kul-north1.jpg" alt="package-place">
                         <div class="single-package-item-txt">
-                            <h3>Ыссык-Куль <span class="pull-right">$699</span></h3>
+                            <h3>Ыссык-Куль <span class="pull-right">$199</span></h3>
                             <div class="packages-para">
                                 <p>
 											<span>
-												<i class="fa fa-angle-right"></i> 8 дней 9 ночей
-                                    <i class="fa fa-angle-right"></i> 5 star
+												<i class="fa fa-angle-right"></i> 2 дн
+                                    <i class="fa fa-angle-right"></i> 5
                                 </p>
                                 <p>
 											<span>
@@ -639,7 +422,7 @@
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
-                                    <span>2544 review</span>
+                                    <span>24 отзывов</span>
                                 </p>
                             </div><!--/.packages-review-->
                             <div class="about-btn">
@@ -656,19 +439,19 @@
                     <div class="single-package-item">
                         <img src="/static/images/packages/issyk-kul-north1.jpg" alt="package-place">
                         <div class="single-package-item-txt">
-                            <h3>Issyk-Kul <span class="pull-right">$255</span></h3>
+                            <h3>Issyk-Kul <span class="pull-right">$205</span></h3>
                             <div class="packages-para">
                                 <p>
 											<span>
-												<i class="fa fa-angle-right"></i> 5 daays 6 nights
+												<i class="fa fa-angle-right"></i> 5 days
 											</span>
-                                    <i class="fa fa-angle-right"></i> 5 star accomodation
+                                    <i class="fa fa-angle-right"></i> 5
                                 </p>
                                 <p>
 											<span>
-												<i class="fa fa-angle-right"></i>  transportation
+												<i class="fa fa-angle-right"></i>  Транспортировка
 											</span>
-                                    <i class="fa fa-angle-right"></i> food facilities
+                                    <i class="fa fa-angle-right"></i> Тамак аш
                                 </p>
                             </div><!--/.packages-para-->
                             <div class="packages-review">
@@ -678,12 +461,12 @@
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
-                                    <span>2544 review</span>
+                                    <span>11 отзывов</span>
                                 </p>
                             </div><!--/.packages-review-->
                             <div class="about-btn">
                                 <button class="about-view packages-btn">
-                                    book now
+                                    Забронировать
                                 </button>
                             </div><!--/.about-btn-->
                         </div><!--/.single-package-item-txt-->
@@ -695,19 +478,19 @@
                     <div class="single-package-item">
                         <img src="/static/images/packages/issyk-kul-north1.jpg" alt="package-place">
                         <div class="single-package-item-txt">
-                            <h3>Sary-Chelek <span class="pull-right">$299</span></h3>
+                            <h3>Sary-Chelek <span class="pull-right">$99</span></h3>
                             <div class="packages-para">
                                 <p>
 											<span>
-												<i class="fa fa-angle-right"></i> 5 daays 6 nights
+												<i class="fa fa-angle-right"></i> 1 день
 											</span>
-                                    <i class="fa fa-angle-right"></i> 5 star accomodation
+                                    <i class="fa fa-angle-right"></i> 5
                                 </p>
                                 <p>
 											<span>
-												<i class="fa fa-angle-right"></i>  transportation
+												<i class="fa fa-angle-right"></i>  Транспортировка
 											</span>
-                                    <i class="fa fa-angle-right"></i> food facilities
+                                    <i class="fa fa-angle-right"></i> Тамак аш
                                 </p>
                             </div><!--/.packages-para-->
                             <div class="packages-review">
@@ -717,12 +500,12 @@
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
-                                    <span>2544 review</span>
+                                    <span>23 отзывов</span>
                                 </p>
                             </div><!--/.packages-review-->
                             <div class="about-btn">
                                 <button class="about-view packages-btn">
-                                    book now
+                                    Забронировать
                                 </button>
                             </div><!--/.about-btn-->
                         </div><!--/.single-package-item-txt-->
@@ -734,19 +517,18 @@
                     <div class="single-package-item">
                         <img src="/static/images/packages/issyk-kul-north1.jpg" alt="package-place">
                         <div class="single-package-item-txt">
-                            <h3>thailand <span class="pull-right">$799</span></h3>
+                            <h3>Кегети <span class="pull-right">$89</span></h3>
                             <div class="packages-para">
                                 <p>
 											<span>
-												<i class="fa fa-angle-right"></i> 5 daays 6 nights
-											</span>
-                                    <i class="fa fa-angle-right"></i> 5 star accomodation
+												<i class="fa fa-angle-right"></i> 2 дня
+                                    <i class="fa fa-angle-right"></i> 5
                                 </p>
                                 <p>
 											<span>
-												<i class="fa fa-angle-right"></i>  transportation
+												<i class="fa fa-angle-right"></i>  Транспортировка
 											</span>
-                                    <i class="fa fa-angle-right"></i> food facilities
+                                    <i class="fa fa-angle-right"></i> Тамак аш
                                 </p>
                             </div><!--/.packages-para-->
                             <div class="packages-review">
@@ -756,12 +538,12 @@
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
-                                    <span>2544 review</span>
+                                    <span>19 отзывов</span>
                                 </p>
                             </div><!--/.packages-review-->
                             <div class="about-btn">
                                 <button class="about-view packages-btn">
-                                    book now
+                                    Забронировать
                                 </button>
                             </div><!--/.about-btn-->
                         </div><!--/.single-package-item-txt-->
@@ -1209,7 +991,7 @@
 
         </div><!--/.footer-content-->
         <hr>
-        <div class="foot-icons ">
+        <div class="foot-icons">
             <ul class="footer-social-links list-inline list-unstyled">
                 <li><a href="#" target="_blank" class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#" target="_blank" class="foot-icon-bg-2"><i class="fa fa-twitter"></i></a></li>
