@@ -42,9 +42,8 @@ class BookNow(models.Model):
     phone = models.CharField(max_length=15, verbose_name='Ваш номер телефона')
     email = models.EmailField(verbose_name='Ваша почта')
     sightseeing = models.ForeignKey(Sight, on_delete=models.CASCADE, verbose_name='Тур')
-    quantity = models.PositiveIntegerField(default=1, verbose_name='Количество забронированых туров')
-    for_anonymous_user = models.BooleanField(default=False)
-    date = models.DateTimeField(auto_now_add=False, null=True, verbose_name='Дата бронирования')
+    quantity = models.PositiveIntegerField(default=0, verbose_name='Количество забронированых туров')
+    date = models.DateTimeField(auto_now=False, verbose_name='Дата бронирования')
 
     class Meta:
         verbose_name = 'Бронь'
@@ -70,8 +69,17 @@ class JoinUs(models.Model):
 
 
 class Review(models.Model):
-    reviews = models.CharField(max_length=1000, verbose_name='Отзыв')
+    name = models.CharField(max_length=30, verbose_name='Имя пользователя')
+    reviews = models.TextField(verbose_name='Отзыв')
 
     class Meta:
         verbose_name = 'Отзывы'
         verbose_name_plural = 'Отзыв'
+
+    def __str__(self):
+        return self.name
+
+class LatestNews(models.Model):
+    news_name = models.CharField(max_length=100, verbose_name='Трендовые Новости')
+    text_news = models.TextField(verbose_name='Описание')
+    pub_date = models.DateField(verbose_name='Дата добавления')

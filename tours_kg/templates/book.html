@@ -35,38 +35,93 @@
 				<div class="row">
 					<div class="booking-form">
 						<div class="booking-bg"></div>
-						<form>
+							<form action="{% url 'book_now'%}" method="POST">
+                            {% csrf_token %}
+<!--                            <div class="row">-->
+<!--                                <div class="col-md-4 ">-->
+<!--                                    <input type="text" name="name" class="form-control" id="name"-->
+<!--                                           placeholder="Имя" required>-->
+<!--                                </div>-->
+<!--                                <div class="col-md-4 ">-->
+<!--                                    <input type="email" class="form-control" name="surname" id="surname"-->
+<!--                                           placeholder="Фамилия" required>-->
+<!--                                </div>-->
+
+<!--                                <div class="col-md-4 ">-->
+<!--                                    <input type="text" class="form-control" name="email" id="email"-->
+<!--                                           placeholder="Введите ваш email" required>-->
+<!--                                </div>-->
+<!--                                <div class=" col-md-4 form-group mt-3">-->
+<!--                                    <input type="date" class="form-control" name="phone" id="phone"-->
+<!--                                           placeholder="Введите ваш номер телефона" required>-->
+<!--                                </div>-->
+<!--                                <div class=" col-md-4 form-group mt-3">-->
+<!--                                    <input type="number" class="form-control" name="sightseeing" id="sightseeing"-->
+<!--                                           placeholder="Тур" required>-->
+<!--                                </div>-->
+<!--                                <div class="col-md-4 form-group mt-3">-->
+<!--                                    <input type="text" class="form-control" name="date" id="date"-->
+<!--                                           placeholder="Дата" required>-->
+<!--                                </div>-->
+<!--                                <div class="col-md-4 form-group mt-3">-->
+<!--                                    <input type="text" class="form-control" name="quantity" id="quantity"-->
+<!--                                           placeholder="Количество людей" required>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <br>-->
+
+<!--                            <div class="text-center">-->
+<!--                                <button type="submit">Забронировать !</button>-->
+<!--                            </div>-->
+
+<!--                        </form>-->
+<!--						<form>-->
 							<div class="form-header">
 								<h2>Забронируйте вашу поездку</h2>
 							</div>
 							<div class="form-group">
-								<input class="form-control" type="text" placeholder="Введите ваше имя">
+								<input class="form-control" type="text" name="name" id="name" placeholder="Введите ваше имя">
 								<span class="form-label">Имя</span>
 							</div>
+                                <div class="form-group">
+								<input class="form-control" type="text" name="surname" id="surname" placeholder="Введите вашу Фамилию">
+								<span class="form-label">Фамилия</span>
+							</div>
 							<div class="form-group">
-								<input class="form-control" type="tel" placeholder="Введите ваш номер телефона">
+								<input class="form-control" type="tel" name="phone" id="phone" placeholder="Введите ваш номер телефона">
 								<span class="form-label">Номер</span>
 							</div>
+                                <div class="form-group">
+								<input class="form-control" type="email" name="email" id="email" placeholder="Введите вашу почту">
+								<span class="form-label">Почта</span>
+							</div>
 							<div class="form-group">
-								<input class="form-control" type="tel" placeholder="Выберите тур">
+								<input class="form-control" type="tel" name="sightseeing" id="sightseeing" placeholder="Выберите тур">
 								<span class="form-label">Тур</span>
 							</div>
-							<div class="form-group">
-								<select class="form-control" required>
-									<option value="" label="&nbsp;" selected hidden></option>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-									<option>6</option>
-									<option>7</option>
-								</select>
-								<span class="select-arrow"></span>
-								<span class="form-label">Количество людей</span>
+                                <div class="form-group">
+								<input class="form-control" type="date" name="date" id="date" placeholder="На какое время ?">
+								<span class="form-label">Дата</span>
 							</div>
-							<div class="form-btn">
-								<button class="submit-btn">Забронировать!</button>
+                                <div class="form-group">
+								<input class="form-control" type="text" name="quantity" id="quantity" placeholder="Количество">
+								<span class="form-label">Количество</span>
+							</div>
+<!--							<div class="form-group" name="quantity" id='quantity'>-->
+<!--								<select class="form-control" required>-->
+<!--									<option value="" label="&nbsp;" selected hidden></option>-->
+<!--									<option>1</option>-->
+<!--									<option>2</option>-->
+<!--									<option>3</option>-->
+<!--									<option>4</option>-->
+<!--									<option>5</option>-->
+<!--									<option>6</option>-->
+<!--									<option>7</option>-->
+<!--								</select>-->
+<!--								<span class="select-arrow"></span>-->
+<!--							<span class="form-label">Количество людей</span>-->
+						<div class="form-btn">
+						<button class="submit-btn">Забронировать!</button>
 							</div>
 						</form>
 					</div>
