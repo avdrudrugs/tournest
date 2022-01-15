@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth import get_user_model
-from tours_kg.models import BookNow, Review
+from tours_kg.models import BookNow, Review, User
 
 User = get_user_model()
 
@@ -34,3 +34,5 @@ class ReviewForm(forms.ModelForm):
         fields = (
             'name', 'reviews'
         )
+
+

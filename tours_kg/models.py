@@ -1,5 +1,8 @@
 from django.db import models
 from django.urls import reverse
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
 
 
 class Region(models.Model):
@@ -50,16 +53,6 @@ class BookNow(models.Model):
         verbose_name_plural = 'Брони'
 
 
-class Users(models.Model):
-    username = models.CharField(max_length=70, verbose_name='Как к вам обращаться?')
-    user_phone = models.CharField(max_length=20, verbose_name='Ваш номер телефона')
-    orders = models.ManyToManyField(BookNow, verbose_name='Ваши брони', related_name='orders')
-
-    class Meta:
-        verbose_name = 'Пользователи'
-        verbose_name_plural = 'Пользователи'
-
-
 class JoinUs(models.Model):
     email = models.EmailField(verbose_name='Введите вашу почту')
 
@@ -79,7 +72,17 @@ class Review(models.Model):
     def __str__(self):
         return self.name
 
+
 class LatestNews(models.Model):
     news_name = models.CharField(max_length=100, verbose_name='Трендовые Новости')
     text_news = models.TextField(verbose_name='Описание')
     pub_date = models.DateField(verbose_name='Дата добавления')
+
+
+class Customer(models.Model):
+    user = models.ForeignKey(User, verbose_name='Пользователь', on_delete=models.CASCADE)
+    phone = models.CharField(max_length=20, verbose_name='Номер телефона', null=True, blank=True)
+    address = models.CharField(max_length=255, verbose_name='Адрес', null=True, blank=True)
+
+    def __str__(self):
+        return "Покупатель: {} {}".format(self.user.first_name, self.user.last_name)
