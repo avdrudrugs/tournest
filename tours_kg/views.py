@@ -63,3 +63,7 @@ class RegistrationView(View):
 
 def index(request):
     return render(request, 'index.html')
+
+
+
+

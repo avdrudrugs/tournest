@@ -3,4 +3,6 @@ from tours_kg.views import index
 
 urlpatterns = [
     path('', index, name='base_view'),
+
 ]
+
