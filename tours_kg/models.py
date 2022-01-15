@@ -51,7 +51,7 @@ class BookNow(models.Model):
     sightseeing = models.CharField(verbose_name='Тур', blank=True, null=True, max_length=100,
                                    choices=TOURS)
     quantity = models.PositiveIntegerField(default=0, verbose_name='Количество забронированых туров')
-    date = models.DateTimeField(auto_now_add=False, verbose_name='Дата бронирования')
+    date = models.DateField(verbose_name='Дата бронирования')
 
     class Meta:
         verbose_name = 'Бронь'
@@ -75,17 +75,3 @@ class JoinUs(models.Model):
         verbose_name = 'Присоединяйся к нам'
         verbose_name_plural = 'Подключенные'
 
-
-class Review(models.Model):
-    name = models.CharField(max_length=30, verbose_name='Имя пользователя')
-    reviews = models.TextField(verbose_name='Отзыв')
-
-    class Meta:
-        verbose_name = 'Отзывы'
-        verbose_name_plural = 'Отзыв'
-
-
-class LatestNews(models.Model):
-    news_name = models.CharField(max_length=100, verbose_name='Трендовые Новости')
-    text_news = models.TextField(verbose_name='Описание')
-    pub_date = models.DateField(verbose_name='Дата добавления')

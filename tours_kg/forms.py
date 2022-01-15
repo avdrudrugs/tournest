@@ -1,8 +1,5 @@
 from django import forms
-from django.contrib.auth import get_user_model
-from tours_kg.models import BookNow, Sight
-
-User = get_user_model()
+from tours_kg.models import BookNow, Sight, JoinUs
 
 
 class BookNowForm(forms.ModelForm):
@@ -10,22 +7,22 @@ class BookNowForm(forms.ModelForm):
         super(BookNowForm, self).__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
             if field.widget.attrs.get('class'):
-                field.widget.attrs['class'] += ' form-control'
+                field.widget.attrs['class'] += 'form-control'
             else:
                 field.widget.attrs['class'] = 'form-control'
 
-    sightseeing = forms.Select(attrs={'class': 'form-control'},
-                               choices=BookNow.TOURS)
+    # sightseeing = forms.Select(attrs={'class': 'form-control', 'placeholder': 'Выберите Тур'},
+    # choices=BookNow.sightseeing)
 
     class Meta:
         model = BookNow
         fields = ('__all__')
 
 
-class JoinUs(forms.ModelForm):
+class JoinUsForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
-        super().__init__(self, *args, **kwargs)
+        super(JoinUsForm, self).__init__(*args, **kwargs)
 
-        class Meta:
-            model = JoinUs
-            fields = 'email'
+    class Meta:
+        model = JoinUs
+        fields = ('__all__')

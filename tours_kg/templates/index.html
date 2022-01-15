@@ -121,12 +121,12 @@
                     <div class="single-about-us">
                         <div class="about-us-txt">
                             <h2>
-                                Путишествуйте по Кыргызстану вместе с TourNest!
+                                Путешествуйте по Кыргызстану вместе с TourNest!
 
                             </h2>
                             <div class="about-btn">
                                 <button class="about-view">
-                                    Путишествовать!
+                                    Путешествовать!
                                 </button>
                             </div><!--/.about-btn-->
                         </div><!--/.about-us-txt-->
@@ -801,128 +801,28 @@
 
 <!--special-offer end-->
 
-<!--blog start-->
-<section id="blog" class="blog">
-    <div class="container">
-        <div class="blog-details">
-            <div class="gallary-header text-center">
-                <h2>
-                    latest news
-                </h2>
-                <p>
-                    Travel News from all over the world
-                </p>
-            </div><!--/.gallery-header-->
-            <div class="blog-content">
-                <div class="row">
-
-                    <div class="col-sm-4 col-md-4">
-                        <div class="thumbnail">
-                            <h2>trending news <span>15 november 2017</span></h2>
-                            <div class="thumbnail-img">
-                                <img src="static/images/blog/gorno-base1.png" alt="blog-img">
-                                <div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
-
-                            </div><!--/.thumbnail-img-->
-
-                            <div class="caption">
-                                <div class="blog-txt">
-                                    <h3>
-                                        <a href="#">
-                                            Discover on beautiful weather, Fantastic foods and historical place in Prag
-                                        </a>
-                                    </h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et
-                                        dolore magna aliqua. Ut enim ad minim veniam
-                                    </p>
-                                    <a href="#">Read More</a>
-                                </div><!--/.blog-txt-->
-                            </div><!--/.caption-->
-                        </div><!--/.thumbnail-->
-
-                    </div><!--/.col-->
-
-                    <div class="col-sm-4 col-md-4">
-                        <div class="thumbnail">
-                            <h2>trending news <span>15 november 2017</span></h2>
-                            <div class="thumbnail-img">
-                                <img src="static/images/blog/issyk-kul-north1.jpg" alt="blog-img">
-                                <div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
-
-                            </div><!--/.thumbnail-img-->
-                            <div class="caption">
-                                <div class="blog-txt">
-                                    <h3>
-                                        <a href="#">
-                                            Discover on beautiful weather, Fantastic foods and historical place in india
-                                        </a>
-                                    </h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et
-                                        dolore magna aliqua. Ut enim ad minim veniam
-                                    </p>
-                                    <a href="#">Read More</a>
-                                </div><!--/.blog-txt-->
-                            </div><!--/.caption-->
-                        </div><!--/.thumbnail-->
-
-                    </div><!--/.col-->
-
-                    <div class="col-sm-4 col-md-4">
-                        <div class="thumbnail">
-                            <h2>trending news <span>15 november 2022</span></h2>
-                            <div class="thumbnail-img">
-                                <img src="static/images/blog/issyk-kul-north1.jpg" alt="blog-img">
-                                <div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
-
-                            </div><!--/.thumbnail-img-->
-                            <div class="caption">
-                                <div class="blog-txt">
-                                    <h3><a href="#">10 Most Natural place to Discover</a></h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et
-                                        dolore magna aliqua. Ut enim ad minim veniam
-                                    </p>
-                                    <a href="#">Read More</a>
-                                </div><!--/.blog-txt-->
-                            </div><!--/.caption-->
-                        </div><!--/.thumbnail-->
-
-                    </div><!--/.col-->
-
-                </div><!--/.row-->
-            </div><!--/.blog-content-->
-        </div><!--/.blog-details-->
-    </div><!--/.container-->
-
-</section><!--/.blog-->
-<!--blog end-->
-
-
 <!--subscribe start-->
 <section id="subs" class="subscribe">
     <div class="container">
         <div class="subscribe-title text-center">
             <h2>
-                Присоединяйтесь к нашему Списку Подписчиков, чтобы получать регулярные обновления
+                Присоединяйтесь к нам, чтобы получать регулярные обновления
             </h2>
             <p>
                 Подпишитесь сейчас. Мы вышлем вам лучшее предложение для вашей поездки
             </p>
         </div>
-        <form>
-            <div class="row">
+        <form class="row" action="{% url 'join-us'%}" method="POST">
+                {% csrf_token %}
                 <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
                     <div class="custom-input-group">
-                        <input type="email" class="form-control" placeholder="Enter your Email Here">
+                        <input type="email" name="email" id="email" class="form-control"  placeholder="Введите свой email">
                         <button class="appsLand-btn subscribe-btn">Подписаться</button>
                         <div class="clearfix"></div>
                         <i class="fa fa-envelope"></i>
                     </div>
 
                 </div>
-            </div>
         </form>
     </div>
 
@@ -938,7 +838,7 @@
                 <div class="col-sm-3">
                     <div class="single-footer-item">
                         <div class="footer-logo">
-                            <a href="index.html">
+                            <a href="#">
                                 tour<span>Nest</span>
                             </a>
                             <p>
@@ -993,9 +893,9 @@
         <hr>
         <div class="foot-icons">
             <ul class="footer-social-links list-inline list-unstyled">
-                <li><a href="#" target="_blank" class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#" target="_blank" class="foot-icon-bg-2"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#" target="_blank" class="foot-icon-bg-3"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://ru-ru.facebook.com/pg/Beautiful-Photos-Of-Kyrgyzstan-100437591752756/posts/?ref=page_internal" target="_blank" class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/visitkgz" target="_blank" class="foot-icon-bg-2"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://instagram.com/beautiful_places_in_kyrgyzstan?utm_medium=copy_link" target="_blank" class="foot-icon-bg-3"><i class="fa fa-instagram"></i></a></li>
             </ul>
             <p>&copy; 2022 <a href="https://www.themesine.com">ThemeSINE</a>. Все права защищены.</p>
 
