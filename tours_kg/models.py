@@ -75,3 +75,14 @@ class JoinUs(models.Model):
         verbose_name = 'Присоединяйся к нам'
         verbose_name_plural = 'Подключенные'
 
+
+class Review(models.Model):
+    name = models.CharField(max_length=30, verbose_name='Имя пользователя')
+    reviews = models.TextField(verbose_name='Отзыв')
+
+    class Meta:
+        verbose_name = 'Отзывы'
+        verbose_name_plural = 'Отзыв'
+
+    def __str__(self):
+        return self.name

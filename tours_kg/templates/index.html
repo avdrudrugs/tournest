@@ -1,6 +1,6 @@
 {% load static%}
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
     <!-- META DATA -->
@@ -34,7 +34,7 @@
 
     <!--owl.carousel.css-->
     <link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet">
-    <link href="{% static 'css/owl.theme.default.min.css'%}" rel="stylesheet" h/>
+    <link href="{% static 'css/owl.theme.default.min.css'%}" rel="stylesheet">
 
     <!-- range css-->
     <link href="{% static 'css/jquery-ui.min.css' %}" rel="stylesheet"/>
@@ -95,7 +95,7 @@
                                 <li class="smooth-menu"><a href="#home">Главная страница</a></li>
                                 <li class="smooth-menu"><a href="#gallery">Точка назначения </a></li>
                                 <li class="smooth-menu"><a href="#pack">Туры </a></li>
-                                <li class="smooth-menu"><a href="#blog">Блог</a></li>
+                                <li class="smooth-menu"><a href="#subs">Отзывы</a></li>
                                 <li>
                                     <a class="nav-link text-white" href="{% url 'book_now' %}">Забронировать</a>
                                 </li><!--/.project-btn-->
@@ -323,13 +323,12 @@
                     <div class="single-package-item">
                         <img src="static/images/packages/issyk-kul-north1.jpg" alt="package-place">
                         <div class="single-package-item-txt">
-                            <h3>Ара-Кол <span class="pull-right">2000</span></h3>
+                            <h3>Ара-Кол <span class="pull-right">1000 сом</span></h3>
                             <div class="packages-para">
                                 <p>
 											<span>
-												<i class="fa fa-angle-right"></i> 5 дней
+												<i class="fa fa-angle-right"></i> 1 день
 											</span>
-                                    <i class="fa fa-angle-right"></i> 5 star
                                 </p>
                                 <p>
 											<span>
@@ -345,13 +344,12 @@
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
-                                    <span>45 отзывов</span>
+                                    <span>5 отзывов</span>
                                 </p>
                             </div><!--/.packages-review-->
                             <div class="about-btn">
-                                <button class="about-view packages-btn">
-                                    Забронировать
-                                </button>
+                                <button>
+                                    <a class="nav-link text-white" href="{% url 'book_now' %}"> Забронировать </a></button>
                             </div><!--/.about-btn-->
                         </div><!--/.single-package-item-txt-->
                     </div><!--/.single-package-item-->
@@ -362,13 +360,12 @@
                     <div class="single-package-item">
                         <img src="static/images/packages/issyk-kul-north1.jpg" alt="package-place">
                         <div class="single-package-item-txt">
-                            <h3>Горнолыжная база <span class="pull-right">$89</span></h3>
+                            <h3>Горнолыжная база Каракол <span class="pull-right">$89</span></h3>
                             <div class="packages-para">
                                 <p>
 											<span>
 												<i class="fa fa-angle-right"></i> 3 дня
 											</span>
-                                    <i class="fa fa-angle-right"></i> 5
                                 </p>
                                 <p>
 											<span>
@@ -384,13 +381,12 @@
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
-                                    <span>4 отзывов</span>
+                                    <span>3 отзыва</span>
                                 </p>
                             </div><!--/.packages-review-->
                             <div class="about-btn">
-                                <button class="about-view packages-btn">
-                                    Забронировать
-                                </button>
+                                <button>
+                                    <a class="nav-link text-white" href="{% url 'book_now' %}"> Забронировать </a></button>
                             </div><!--/.about-btn-->
                         </div><!--/.single-package-item-txt-->
                     </div><!--/.single-package-item-->
@@ -401,12 +397,12 @@
                     <div class="single-package-item">
                         <img src="/static/images/issyk-kul-north1.jpg" alt="package-place">
                         <div class="single-package-item-txt">
-                            <h3>Ыссык-Куль <span class="pull-right">$199</span></h3>
+                            <h3>Кел-Суу <span class="pull-right">$199</span></h3>
                             <div class="packages-para">
                                 <p>
 											<span>
-												<i class="fa fa-angle-right"></i> 2 дн
-                                    <i class="fa fa-angle-right"></i> 5
+												<i class="fa fa-angle-right"></i> 4 дня
+                                            </span>
                                 </p>
                                 <p>
 											<span>
@@ -422,13 +418,12 @@
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
-                                    <span>24 отзывов</span>
+                                    <span>4 отзыва</span>
                                 </p>
                             </div><!--/.packages-review-->
                             <div class="about-btn">
-                                <button class="about-view packages-btn">
-                                    Забронировать
-                                </button>
+                                <button>
+                                    <a class="nav-link text-white" href="{% url 'book_now' %}"> Забронировать </a></button>
                             </div><!--/.about-btn-->
                         </div><!--/.single-package-item-txt-->
                     </div><!--/.single-package-item-->
@@ -439,13 +434,12 @@
                     <div class="single-package-item">
                         <img src="/static/images/packages/issyk-kul-north1.jpg" alt="package-place">
                         <div class="single-package-item-txt">
-                            <h3>Issyk-Kul <span class="pull-right">$205</span></h3>
+                            <h3>Иссык-Куль <span class="pull-right">$205</span></h3>
                             <div class="packages-para">
                                 <p>
 											<span>
-												<i class="fa fa-angle-right"></i> 5 days
+												<i class="fa fa-angle-right"></i> 5 дней
 											</span>
-                                    <i class="fa fa-angle-right"></i> 5
                                 </p>
                                 <p>
 											<span>
@@ -465,9 +459,8 @@
                                 </p>
                             </div><!--/.packages-review-->
                             <div class="about-btn">
-                                <button class="about-view packages-btn">
-                                    Забронировать
-                                </button>
+                                <button>
+                                    <a class="nav-link text-white" href="{% url 'book_now' %}"> Забронировать </a></button>
                             </div><!--/.about-btn-->
                         </div><!--/.single-package-item-txt-->
                     </div><!--/.single-package-item-->
@@ -478,13 +471,12 @@
                     <div class="single-package-item">
                         <img src="/static/images/packages/issyk-kul-north1.jpg" alt="package-place">
                         <div class="single-package-item-txt">
-                            <h3>Sary-Chelek <span class="pull-right">$99</span></h3>
+                            <h3>Сары-Челек <span class="pull-right">$99</span></h3>
                             <div class="packages-para">
                                 <p>
 											<span>
-												<i class="fa fa-angle-right"></i> 1 день
+												<i class="fa fa-angle-right"></i> 3 дня
 											</span>
-                                    <i class="fa fa-angle-right"></i> 5
                                 </p>
                                 <p>
 											<span>
@@ -504,9 +496,8 @@
                                 </p>
                             </div><!--/.packages-review-->
                             <div class="about-btn">
-                                <button class="about-view packages-btn">
-                                    Забронировать
-                                </button>
+                                <button>
+                                    <a class="nav-link text-white" href="{% url 'book_now' %}"> Забронировать </a></button>
                             </div><!--/.about-btn-->
                         </div><!--/.single-package-item-txt-->
                     </div><!--/.single-package-item-->
@@ -517,12 +508,12 @@
                     <div class="single-package-item">
                         <img src="/static/images/packages/issyk-kul-north1.jpg" alt="package-place">
                         <div class="single-package-item-txt">
-                            <h3>Кегети <span class="pull-right">$89</span></h3>
+                            <h3>Кегети <span class="pull-right">800 сом</span></h3>
                             <div class="packages-para">
                                 <p>
 											<span>
-												<i class="fa fa-angle-right"></i> 2 дня
-                                    <i class="fa fa-angle-right"></i> 5
+												<i class="fa fa-angle-right"></i> 1 день
+                                            </span>
                                 </p>
                                 <p>
 											<span>
@@ -542,9 +533,8 @@
                                 </p>
                             </div><!--/.packages-review-->
                             <div class="about-btn">
-                                <button class="about-view packages-btn">
-                                    Забронировать
-                                </button>
+                                <button>
+                                    <a class="nav-link text-white" href="{% url 'book_now' %}"> Забронировать </a></button>
                             </div><!--/.about-btn-->
                         </div><!--/.single-package-item-txt-->
                     </div><!--/.single-package-item-->
@@ -566,234 +556,279 @@
             <h2>
                 Отзывы клиентов
             </h2>
-            <p>
-                От таких красот клиенты просто охуели!
-            </p>
 
         </div><!--/.gallery-header-->
 
         <div class="owl-carousel owl-theme" id="testemonial-carousel">
 
-            <div class="home1-testm item">
-                <div class="home1-testm-single text-center">
-                    <div class="home1-testm-img">
-                        <img src="static/images/client/3.jpeg" alt="img"/>
-                    </div><!--/.home1-testm-img-->
-                    <div class="home1-testm-txt">
+					<div class="home1-testm item">
+						<div class="home1-testm-single text-center">
+							<div class="home1-testm-img">
+								<img src="assets/images/client/testimonial1.jpg" alt="img"/>
+							</div><!--/.home1-testm-img-->
+							<div class="home1-testm-txt">
 								<span class="icon section-icon">
 									<i class="fa fa-quote-left" aria-hidden="true"></i>
 								</span>
-                        <p>
-                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam.
-                        </p>
-                        <h3>
-                            <a href="#">
-                                kevin watson
-                            </a>
-                        </h3>
-                        <h4>london, england</h4>
-                    </div><!--/.home1-testm-txt-->
-                </div><!--/.home1-testm-single-->
+								<p>
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+								</p>
+								<h3>
+									<a href="#">
+										kevin watson
+									</a>
+								</h3>
+								<h4>london, england</h4>
+							</div><!--/.home1-testm-txt-->
+						</div><!--/.home1-testm-single-->
 
-            </div><!--/.item-->
+					</div><!--/.item-->
 
-            <div class="home1-testm item">
-                <div class="home1-testm-single text-center">
-                    <div class="home1-testm-img">
-                        <img src="static/images/client/33.jpeg" alt="img"/>
-                    </div><!--/.home1-testm-img-->
-                    <div class="home1-testm-txt">
+					<div class="home1-testm item">
+						<div class="home1-testm-single text-center">
+							<div class="home1-testm-img">
+								<img src="assets/images/client/testimonial2.jpg" alt="img"/>
+							</div><!--/.home1-testm-img-->
+							<div class="home1-testm-txt">
 								<span class="icon section-icon">
 									<i class="fa fa-quote-left" aria-hidden="true"></i>
 								</span>
-                        <p>
-                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam.
-                        </p>
-                        <h3>
-                            <a href="#">
-                                kevin watson
-                            </a>
-                        </h3>
-                        <h4>london, england</h4>
-                    </div><!--/.home1-testm-txt-->
-                </div><!--/.home1-testm-single-->
+								<p>
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+								</p>
+								<h3>
+									<a href="#">
+										kevin watson
+									</a>
+								</h3>
+								<h4>london, england</h4>
+							</div><!--/.home1-testm-txt-->
+						</div><!--/.home1-testm-single-->
 
-            </div><!--/.item-->
+					</div><!--/.item-->
 
-            <div class="home1-testm item">
-                <div class="home1-testm-single text-center">
-                    <div class="home1-testm-img">
-                        <img src="static/images/client/444.jpeg" alt="img"/>
-                    </div><!--/.home1-testm-img-->
-                    <div class="home1-testm-txt">
+					<div class="home1-testm item">
+						<div class="home1-testm-single text-center">
+							<div class="home1-testm-img">
+								<img src="assets/images/client/testimonial1.jpg" alt="img"/>
+							</div><!--/.home1-testm-img-->
+							<div class="home1-testm-txt">
 								<span class="icon section-icon">
 									<i class="fa fa-quote-left" aria-hidden="true"></i>
 								</span>
-                        <p>
-                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam.
-                        </p>
-                        <h3>
-                            <a href="#">
-                                kevin watson
-                            </a>
-                        </h3>
-                        <h4>london, england</h4>
-                    </div><!--/.home1-testm-txt-->
-                </div><!--/.home1-testm-single-->
+								<p>
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+								</p>
+								<h3>
+									<a href="#">
+										kevin watson
+									</a>
+								</h3>
+								<h4>london, england</h4>
+							</div><!--/.home1-testm-txt-->
+						</div><!--/.home1-testm-single-->
 
-            </div><!--/.item-->
+					</div><!--/.item-->
 
-            <div class="home1-testm item">
-                <div class="home1-testm-single text-center">
-                    <div class="home1-testm-img">
-                        <img src="static/images/client/gknfgn.jpeg" alt="img"/>
-                    </div><!--/.home1-testm-img-->
-                    <div class="home1-testm-txt">
+					<div class="home1-testm item">
+						<div class="home1-testm-single text-center">
+							<div class="home1-testm-img">
+								<img src="assets/images/client/testimonial1.jpg" alt="img"/>
+							</div><!--/.home1-testm-img-->
+							<div class="home1-testm-txt">
 								<span class="icon section-icon">
 									<i class="fa fa-quote-left" aria-hidden="true"></i>
 								</span>
-                        <p>
-                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam.
-                        </p>
-                        <h3>
-                            <a href="#">
-                                kevin watson
-                            </a>
-                        </h3>
-                        <h4>london, england</h4>
-                    </div><!--/.home1-testm-txt-->
-                </div><!--/.home1-testm-single-->
+								<p>
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+								</p>
+								<h3>
+									<a href="#">
+										kevin watson
+									</a>
+								</h3>
+								<h4>london, england</h4>
+							</div><!--/.home1-testm-txt-->
+						</div><!--/.home1-testm-single-->
 
-            </div><!--/.item-->
+					</div><!--/.item-->
 
-            <div class="home1-testm item">
-                <div class="home1-testm-single text-center">
-                    <div class="home1-testm-img">
-                        <img src="static/images/client/kdgmfdg,f.jpeg" alt="img"/>
-                    </div><!--/.home1-testm-img-->
-                    <div class="home1-testm-txt">
+					<div class="home1-testm item">
+						<div class="home1-testm-single text-center">
+							<div class="home1-testm-img">
+								<img src="assets/images/client/testimonial2.jpg" alt="img"/>
+							</div><!--/.home1-testm-img-->
+							<div class="home1-testm-txt">
 								<span class="icon section-icon">
 									<i class="fa fa-quote-left" aria-hidden="true"></i>
 								</span>
-                        <p>
-                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam.
-                        </p>
-                        <h3>
-                            <a href="#">
-                                kevin watson
-                            </a>
-                        </h3>
-                        <h4>london, england</h4>
-                    </div><!--/.home1-testm-txt-->
-                </div><!--/.home1-testm-single-->
+								<p>
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+								</p>
+								<h3>
+									<a href="#">
+										kevin watson
+									</a>
+								</h3>
+								<h4>london, england</h4>
+							</div><!--/.home1-testm-txt-->
+						</div><!--/.home1-testm-single-->
 
-            </div><!--/.item-->
+					</div><!--/.item-->
 
-            <div class="home1-testm item">
-                <div class="home1-testm-single text-center">
-                    <div class="home1-testm-img">
-                        <img src="static/images/client/index.jpeg" alt="img"/>
-                    </div><!--/.home1-testm-img-->
-                    <div class="home1-testm-txt">
+					<div class="home1-testm item">
+						<div class="home1-testm-single text-center">
+							<div class="home1-testm-img">
+								<img src="assets/images/client/testimonial1.jpg" alt="img"/>
+							</div><!--/.home1-testm-img-->
+							<div class="home1-testm-txt">
 								<span class="icon section-icon">
 									<i class="fa fa-quote-left" aria-hidden="true"></i>
 								</span>
-                        <p>
-                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam.
-                        </p>
-                        <h3>
-                            <a href="#">
-                                kevin watson
-                            </a>
-                        </h3>
-                        <h4>london, england</h4>
-                    </div><!--/.home1-testm-txt-->
-                </div><!--/.home1-testm-single-->
+								<p>
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+								</p>
+								<h3>
+									<a href="#">
+										kevin watson
+									</a>
+								</h3>
+								<h4>london, england</h4>
+							</div><!--/.home1-testm-txt-->
+						</div><!--/.home1-testm-single-->
 
-            </div><!--/.item-->
+					</div><!--/.item-->
 
-            <div class="home1-testm item">
-                <div class="home1-testm-single text-center">
-                    <div class="home1-testm-img">
-                        <img src="static/images/client/33.jpeg" alt="img"/>
-                    </div><!--/.home1-testm-img-->
-                    <div class="home1-testm-txt">
+					<div class="home1-testm item">
+						<div class="home1-testm-single text-center">
+							<div class="home1-testm-img">
+								<img src="assets/images/client/testimonial1.jpg" alt="img"/>
+							</div><!--/.home1-testm-img-->
+							<div class="home1-testm-txt">
 								<span class="icon section-icon">
 									<i class="fa fa-quote-left" aria-hidden="true"></i>
 								</span>
-                        <p>
-                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam.
-                        </p>
-                        <h3>
-                            <a href="#">
-                                kevin watson
-                            </a>
-                        </h3>
-                        <h4>london, england</h4>
-                    </div><!--/.home1-testm-txt-->
-                </div><!--/.home1-testm-single-->
+								<p>
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+								</p>
+								<h3>
+									<a href="#">
+										kevin watson
+									</a>
+								</h3>
+								<h4>london, england</h4>
+							</div><!--/.home1-testm-txt-->
+						</div><!--/.home1-testm-single-->
 
-            </div><!--/.item-->
+					</div><!--/.item-->
 
-            <div class="home1-testm item">
-                <div class="home1-testm-single text-center">
-                    <div class="home1-testm-img">
-                        <img src="static/images/client/kdgmfdg,f.jpeg" alt="img"/>
-                    </div><!--/.home1-testm-img-->
-                    <div class="home1-testm-txt">
+					<div class="home1-testm item">
+						<div class="home1-testm-single text-center">
+							<div class="home1-testm-img">
+								<img src="assets/images/client/testimonial2.jpg" alt="img"/>
+							</div><!--/.home1-testm-img-->
+							<div class="home1-testm-txt">
 								<span class="icon section-icon">
 									<i class="fa fa-quote-left" aria-hidden="true"></i>
 								</span>
-                        <p>
-                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam.
-                        </p>
-                        <h3>
-                            <a href="#">
-                                kevin watson
-                            </a>
-                        </h3>
-                        <h4>london, england</h4>
-                    </div><!--/.home1-testm-txt-->
-                </div><!--/.home1-testm-single-->
+								<p>
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+								</p>
+								<h3>
+									<a href="#">
+										kevin watson
+									</a>
+								</h3>
+								<h4>london, england</h4>
+							</div><!--/.home1-testm-txt-->
+						</div><!--/.home1-testm-single-->
 
-            </div><!--/.item-->
+					</div><!--/.item-->
 
-            <div class="home1-testm item">
-                <div class="home1-testm-single text-center">
-                    <div class="home1-testm-img">
-                        <img src="static/images/client/3.jpeg" alt="img"/>
-                    </div><!--/.home1-testm-img-->
-                    <div class="home1-testm-txt">
+					<div class="home1-testm item">
+						<div class="home1-testm-single text-center">
+							<div class="home1-testm-img">
+								<img src="assets/images/client/testimonial1.jpg" alt="img"/>
+							</div><!--/.home1-testm-img-->
+							<div class="home1-testm-txt">
 								<span class="icon section-icon">
 									<i class="fa fa-quote-left" aria-hidden="true"></i>
 								</span>
-                        <p>
-                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam.
-                        </p>
-                        <h3>
-                            <a href="#">
-                                kevin watson
-                            </a>
-                        </h3>
-                        <h4>london, england</h4>
-                    </div><!--/.home1-testm-txt-->
-                </div><!--/.home1-testm-single-->
+								<p>
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+								</p>
+								<h3>
+									<a href="#">
+										kevin watson
+									</a>
+								</h3>
+								<h4>london, england</h4>
+							</div><!--/.home1-testm-txt-->
+						</div><!--/.home1-testm-single-->
 
-            </div><!--/.item-->
+					</div><!--/.item-->
 
-        </div><!--/.testemonial-carousel-->
-    </div><!--/.container-->
+				</div><!--/.testemonial-carousel-->
+			</div><!--/.container-->
+
+		</section><!--/.testimonial-->
+		<!-- testemonial End -->
+
+
+<!--        <div class="owl-carousel owl-theme" id="testemonial-carousel">-->
+<!--            {% for review in reviews %}-->
+<!--            <div class="home1-testm item">-->
+<!--                <div class="home1-testm-single text-center">-->
+<!--                    <div class="home1-testm-img">-->
+<!--                        <img src="{% static '/images/client/33.jpeg' %}" alt="img"/>-->
+<!--                    </div>&lt;!&ndash;/.home1-testm-img&ndash;&gt;-->
+<!--                    <div class="home1-testm-txt">-->
+<!--								<span class="icon section-icon">-->
+<!--									<i class="fa fa-quote-left" aria-hidden="true"></i>-->
+<!--								</span>-->
+<!--                        <p>-->
+<!--                            {{ review.reviews | truncatewords_html:15 | safe }}-->
+<!--                        </p>-->
+<!--                        <h3>-->
+<!--                            <a href="#">-->
+<!--                                {{ review.name }}-->
+<!--                            </a>-->
+<!--                        </h3>-->
+<!--                    </div>&lt;!&ndash;/.home1-testm-txt&ndash;&gt;-->
+<!--                </div>&lt;!&ndash;/.home1-testm-single&ndash;&gt;-->
+<!--            </div>&lt;!&ndash;/.item&ndash;&gt;-->
+<!--            {% endfor %}-->
+<!--        </div>-->
+<!--    </div>-->
+
 
 </section><!--/.testimonial-->
+<div class="container mt-5">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-8">
+            <h4>Здесь вы можете оставить свой отзыв.</h4>
+            <div class="d-flex flex-column comment-section">
+                <div class="bg-light p-2">
+                    <form action="{% url 'save' %}" method="POST">
+                        {% csrf_token %}
+<!--                        <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">-->
+<!--                    <div class="custom-input-group">-->
+<!--                        <input type="text" name="name" id="name" class="form-control"  placeholder="Введите свое имя">-->
+                        <div>
+                            <p><b>Ваше имя:</b><br><input type="text" name=name id="name" size="40"></p>
+                            <textarea class="form-control ml-1 shadow-none textarea" name="reviews"
+                                      id="reviews"></textarea>
+                            <div class="form-btn">
+                                <button class="appsLand-btn subscribe-btn">Отправить!</button>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- testemonial End -->
 
 
@@ -900,7 +935,7 @@
             <p>&copy; 2022 <a href="https://www.themesine.com">ThemeSINE</a>. Все права защищены.</p>
 
         </div><!--/.foot-icons-->
-        <div id="scroll-Top">
+        <div class="scroll-Top">
             <i class="fa fa-angle-double-up return-to-top" id="scroll-top" data-toggle="tooltip" data-placement="top"
                title="" data-original-title="Back to Top" aria-hidden="true"></i>
         </div><!--/.scroll-Top-->

@@ -1,11 +1,9 @@
 from django.shortcuts import render
 from django.db.models import Q
 from django.http import HttpResponseRedirect, HttpResponse
-from django.contrib.auth import login, authenticate
 from django.views.generic import DetailView, View
-from django.contrib.auth.mixins import LoginRequiredMixin
 from tours_kg.models import *
-from tours_kg.forms import BookNowForm, JoinUsForm
+from tours_kg.forms import BookNowForm, JoinUsForm, ReviewForm
 from django.contrib import messages
 
 
@@ -60,6 +58,29 @@ def JoinUsNow(request, *args, **kwargs):
         return render(request, 'index.html', {'join': join})
     else:
         return render(request, 'index.html', {'join': join})
+
+
+class ReviewView(View):
+    def get(self, request, *args, **kwargs):
+        reviews = Review.objects.all()
+        context = {
+            'review': reviews
+        }
+        return render(request, 'index.html', context)
+
+
+def savecomment(request, *args, **kwargs):
+    form = ReviewForm
+
+    if request.method == 'POST':
+        name = request.POST['name']
+        reviews = request.POST['reviews']
+        coms = Review(name=name, reviews=reviews)
+        coms.save()
+        return render(request, 'index.html', {'form': form})
+    else:
+        return render(request, 'index.html', {'form': form})
+
 # def JoinUsNow(request):
 #     # if this is a POST request we need to process the form data
 #     if request.method == 'POST':
