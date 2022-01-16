@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8eb2ea1b-ef89-4a5f-a6c6-2c092a1d2437" name="Changes" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/tournest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tournest.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
@@ -39,6 +40,8 @@
       <change beforePath="$PROJECT_DIR$/tours_kg/static/images/packages/p6.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tours_kg/templates/book.html" beforeDir="false" afterPath="$PROJECT_DIR$/tours_kg/templates/book.html" afterDir="false" />
 =======
+=======
+>>>>>>> 11f31a93b1fe7b4daa7ee95712a2a78162ac92fe
       <change afterPath="$PROJECT_DIR$/tours_kg/static/cssforbook/bootstrap.min.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tours_kg/static/cssforbook/style.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tours_kg/templates/book.html" afterDir="false" />
@@ -251,7 +254,47 @@
       <change beforePath="$PROJECT_DIR$/tours_kg/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tours_kg/migrations/0002_joinus_review_alter_booknow_options_and_more.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tours_kg/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tours_kg/models.py" afterDir="false" />
+<<<<<<< HEAD
 >>>>>>> b7fe8b5e504eb11d47a486b5f807e5c84b678645
+=======
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/tournest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tournest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tournest/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tournest/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/tours_kg/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/migrations/0002_alter_booknow_date.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/mixins.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tours_kg/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/static/images/ara_kol1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/static/images/gallary/Kyrgyzstan-Turizm-ZHai-loo-Loshadi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/static/images/gallary/ara_kol1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/static/images/gallary/bashnya-burana.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/static/images/gallary/for3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/static/images/gallary/g1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/static/images/gallary/g2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/static/images/gallary/g3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/static/images/gallary/g4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/static/images/gallary/g5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/static/images/gallary/g6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/static/images/gallary/gorno-base1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/static/images/gallary/horse.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/static/images/gallary/ik1200.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/static/images/gallary/issyk-kul-north1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/static/images/gallary/sary_chelek1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/static/images/gallary/tour.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/static/images/gorno-base1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/static/images/packages/p2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/static/images/packages/p3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/static/images/packages/p4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/static/images/packages/p5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/static/images/packages/p6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tours_kg/templates/book.html" beforeDir="false" afterPath="$PROJECT_DIR$/tours_kg/templates/book.html" afterDir="false" />
+>>>>>>> 86f6a01c053528d90d4a9b6cafe1bc9d01e1c93b
+>>>>>>> 11f31a93b1fe7b4daa7ee95712a2a78162ac92fe
       <change beforePath="$PROJECT_DIR$/tours_kg/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tours_kg/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tours_kg/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tours_kg/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tours_kg/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tours_kg/views.py" afterDir="false" />
@@ -293,10 +336,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../first_shop" />
 =======
     <property name="last_opened_file_path" value="$USER_HOME$/first_shop" />
 >>>>>>> b7fe8b5e504eb11d47a486b5f807e5c84b678645
+=======
+    <property name="last_opened_file_path" value="$USER_HOME$/first_shop" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../first_shop" />
+>>>>>>> 86f6a01c053528d90d4a9b6cafe1bc9d01e1c93b
+>>>>>>> 11f31a93b1fe7b4daa7ee95712a2a78162ac92fe
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">

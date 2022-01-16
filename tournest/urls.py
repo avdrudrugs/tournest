@@ -16,13 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('tours_kg.urls')),
 ]
 
+<<<<<<< HEAD
 from django.conf.urls.static import static
+=======
+>>>>>>> 11f31a93b1fe7b4daa7ee95712a2a78162ac92fe
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
