@@ -1,5 +1,6 @@
 from django import forms
 from tours_kg.models import BookNow, Review, JoinUs
+from tours_kg.models import BookNow, Review, User
 
 
 class BookNowForm(forms.ModelForm):
@@ -26,6 +27,9 @@ class JoinUsForm(forms.ModelForm):
     class Meta:
         model = JoinUs
         fields = ('__all__')
+
+
+0
 
 
 class ReviewForm(forms.ModelForm):

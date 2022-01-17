@@ -1,14 +1,8 @@
 from django.shortcuts import render
-from django.db.models import Q
-from django.http import HttpResponseRedirect, HttpResponse
-from django.views.generic import DetailView, View
+from django.http import HttpResponseRedirect
+from django.views.generic import View
 from tours_kg.models import *
 from tours_kg.forms import BookNowForm, JoinUsForm, ReviewForm
-from django.contrib import messages
-
-
-class MyQ(Q):
-    default = 'OR'
 
 
 class BaseView(View):
