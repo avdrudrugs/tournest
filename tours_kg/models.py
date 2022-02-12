@@ -45,6 +45,7 @@ class BookNow(models.Model):
         ('AK', 'Ала-коль'),
         ('AA', 'Ущелье Ала-Арча'),
         ('JO', 'Джети-Огуз'),
+        ('KS', "Кел-Суу"),
     ]
     name = models.CharField(max_length=30, verbose_name='Ваше имя')
     surname = models.CharField(max_length=30, verbose_name='Ваша фамилия')

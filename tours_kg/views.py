@@ -71,6 +71,8 @@ def savecomment(request, *args, **kwargs):
         reviews = request.POST['reviews']
         coms = Review(name=name, reviews=reviews)
         coms.save()
+        if coms.save() == coms.save():
+            return HttpResponseRedirect('/')
         return render(request, 'index.html', {'form': form})
     else:
         return render(request, 'index.html', {'form': form})
