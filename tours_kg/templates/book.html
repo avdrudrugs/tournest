@@ -41,116 +41,28 @@
     <div class="form-inner">
         <h3>Забронировать Тур</h3>
         <span class="form-label">Имя</span>
-        <input type="text" name="name" id="name" placeholder="Введите ваше Имя">
+        <input type="text" name="name" id="name" placeholder="Введите ваше Имя" required>
         <span class="form-label">Фамилия</span>
-        <input type="text" name="surname" id="surname" placeholder="Введите вашу Фамилию">
+        <input type="text" name="surname" id="surname" placeholder="Введите вашу Фамилию" required>
         <span class="form-label">Номер телефона</span>
-        <input type="text" name="phone" id="phone" placeholder="Введите ваш номер">
+        <input type="text" name="phone" id="phone" placeholder="Введите ваш номер" required>
         <span class="form-label">На какой тур вы хотите ?</span>
         {{form.sightseeing}}
         <span class="form-label">Email</span>
-        <input type="email" name="email" id="email" placeholder="Введите вашу почту">
+        <input type="email" name="email" id="email" placeholder="Введите вашу почту" required>
         <span class="form-label">Дата</span>
-        <input type="date" name="date" id="date" placeholder="На какое время ?">
+        <input type="date" name="date" id="date" placeholder="На какое время ?" required>
         <span class="form-label">Количество людей </span>
-        <select name="quantity" id='quantity'>
-									<option value="" label="&nbsp;" selected hidden></option>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-									<option>6</option>
-									<option>7</option>
-									<option>8</option>
-									<option>9</option>
-									<option>10</option>
-								</select>
+        <select name="quantity" id='quantity' required>
+            <option value="" label="&nbsp;" selected hidden></option>
+        </select>
         <input type="submit" value="Забронировать">
     </div>
 </form>
 </body>
-<!--<body>-->
-<!--	<div id="booking" class="section">-->
-<!--		<div class="section-center">-->
-<!--			<div class="container">-->
-<!--				<div class="row">-->
-<!--					<div class="booking-form">-->
-<!--						<div class="booking-bg"></div>-->
-<!--							<form action="{% url 'book_now'%}" method="POST">-->
-<!--                            {% csrf_token %}-->
-<!--							<div class="form-header">-->
-<!--								<h2>Забронируйте вашу поездку</h2>-->
-<!--							</div>-->
-<!--							<div class="form-group">-->
-<!--								<input class="form-control" type="text" name="name" id="name" placeholder="Введите ваше имя">-->
-<!--								<span class="form-label">Имя</span>-->
-<!--							</div>-->
-<!--                                <div class="form-group">-->
-<!--								<input class="form-control" type="text" name="surname" id="surname" placeholder="Введите вашу Фамилию">-->
-<!--								<span class="form-label">Фамилия</span>-->
-<!--							</div>-->
-<!--							<div class="form-group">-->
-<!--								<input class="form-control" type="tel" name="phone" id="phone" placeholder="Введите ваш номер телефона">-->
-<!--								<span class="form-label">Номер</span>-->
-<!--							</div>-->
-<!--                                <div class="form-group">-->
-<!--								<input class="form-control" type="email" name="email" id="email" placeholder="Введите вашу почту">-->
-<!--								<span class="form-label">Почта</span>-->
-<!--							</div>-->
-<!--							<div class="form-group">-->
-<!--								{{form.sightseeing}}-->
-<!--							</div>-->
-<!--                                <div class="form-group">-->
-<!--								<input class="form-control" type="date" name="date" id="date" placeholder="На какое время ?">-->
-<!--								<span class="form-label">Дата</span>-->
-<!--							<div class="form-group">-->
-<!--								<select class="form-control" name="quantity" id='quantity'>-->
-<!--									<option value="" label="&nbsp;" selected hidden></option>-->
-<!--									<option>1</option>-->
-<!--									<option>2</option>-->
-<!--									<option>3</option>-->
-<!--									<option>4</option>-->
-<!--									<option>5</option>-->
-<!--									<option>6</option>-->
-<!--									<option>7</option>-->
-<!--									<option>8</option>-->
-<!--									<option>9</option>-->
-<!--									<option>10</option>-->
-<!--								</select>-->
-<!--								<span class="select-arrow"></span>-->
-<!--							<span class="form-label">Количество людей</span>-->
-<!--						</div>-->
-<!--						<div class="form-btn">-->
-<!--						<button class="submit-btn">Забронировать!</button>-->
-<!--							</div>-->
-<!--						</form>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--			</div>-->
-<!--		</div>-->
-<!--	</div>-->
 
-<!--	<script src="{% static 'jsforbook/jquery.min.js' %}"></script>-->
-<!--	<script>-->
-<!--		$('.form-control').each(function () {-->
-<!--			floatedLabel($(this));-->
-<!--		});-->
-
-<!--		$('.form-control').on('input', function () {-->
-<!--			floatedLabel($(this));-->
-<!--		});-->
-
-<!--		function floatedLabel(input) {-->
-<!--			var $field = input.closest('.form-group');-->
-<!--			if (input.val()) {-->
-<!--				$field.addClass('input-not-empty');-->
-<!--			} else {-->
-<!--				$field.removeClass('input-not-empty');-->
-<!--			}-->
-<!--		}-->
-<!--	</script>-->
-
-<!--</body>&lt;!&ndash; This templates was made by Colorlib (https://colorlib.com) &ndash;&gt;-->
-
-<!--</html>-->
+<script>
+    for (let i = 1; i <= 100; i++) {
+      document.getElementById('quantity').innerHTML += `<option>${i}</option>`;
+    }
+</script>

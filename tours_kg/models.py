@@ -4,6 +4,7 @@ from django.urls import reverse
 
 User = get_user_model()
 
+
 class Region(models.Model):
     reg_name = models.CharField(max_length=30)
     slug = models.SlugField(unique=True)
@@ -20,12 +21,19 @@ class Region(models.Model):
 
 
 class Sight(models.Model):
+    class StatusEnum(models.TextChoices):
+        USD = "$", "Доллар"
+        SOM = "C", "Сом"
+        EUR = "€", "Евро"
+
     sight_name = models.CharField(max_length=50, verbose_name='Достопримечательность')
     province = models.ForeignKey(Region, max_length=40, on_delete=models.CASCADE, verbose_name='Место расположения')
     description = models.TextField(verbose_name='Описание')
     price = models.IntegerField(default=0, verbose_name='Цена')
-    duration = models.PositiveIntegerField(default=0, verbose_name='Длительность')
+    duration_days = models.PositiveIntegerField(default=0, verbose_name='Длительность')
     slug = models.SlugField(unique=True)
+    image = models.ImageField("изображение")
+    currency_type = models.CharField("Тип валюты", choices=StatusEnum.choices, default=StatusEnum.SOM)
 
     def __str__(self):
         return self.sight_name
@@ -39,20 +47,11 @@ class Sight(models.Model):
 
 
 class BookNow(models.Model):
-    TOURS = [
-        ('SC', 'Сары-Челек'),
-        ('IK', 'Ыссык-Куль'),
-        ('AK', 'Ала-коль'),
-        ('AA', 'Ущелье Ала-Арча'),
-        ('JO', 'Джети-Огуз'),
-        ('KS', "Кел-Суу"),
-    ]
     name = models.CharField(max_length=30, verbose_name='Ваше имя')
     surname = models.CharField(max_length=30, verbose_name='Ваша фамилия')
     phone = models.CharField(max_length=15, verbose_name='Ваш номер телефона')
     email = models.EmailField(verbose_name='Ваша почта')
-    sightseeing = models.CharField(verbose_name='Тур', blank=True, null=True, max_length=100,
-                                   choices=TOURS)
+    sightseeing = models.ForeignKey(Sight, verbose_name='Тур', on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(default=0, verbose_name='Количество забронированых туров')
     date = models.DateField(verbose_name='Дата бронирования')
 
@@ -61,27 +60,19 @@ class BookNow(models.Model):
         verbose_name_plural = 'Брони'
 
 
-class Users(models.Model):
-    username = models.CharField(max_length=70, verbose_name='Как к вам обращаться?')
-    user_phone = models.CharField(max_length=20, verbose_name='Ваш номер телефона')
-    orders = models.ManyToManyField(BookNow, verbose_name='Ваши брони', related_name='orders')
-
-    class Meta:
-        verbose_name = 'Пользователи'
-        verbose_name_plural = 'Пользователи'
-
-
 class JoinUs(models.Model):
     email = models.EmailField(verbose_name='Введите вашу почту')
 
     class Meta:
-        verbose_name = 'Присоединяйся к нам'
-        verbose_name_plural = 'Подключенные'
+        verbose_name = 'Подписанные на рассылку'
+        verbose_name_plural = 'Подписанные на рассылку'
 
 
 class Review(models.Model):
     name = models.CharField(max_length=30, verbose_name='Имя пользователя')
     reviews = models.TextField(verbose_name='Отзыв')
+    sight = models.ForeignKey(Sight, verbose_name="Достопримечательность", on_delete=models.CASCADE)
+    rating = models.PositiveIntegerField("Оценка")
 
     class Meta:
         verbose_name = 'Отзывы'
@@ -91,10 +82,9 @@ class Review(models.Model):
         return self.name
 
 
-class Customer(models.Model):
-    user = models.ForeignKey(User, verbose_name='Пользователь', on_delete=models.CASCADE)
-    phone = models.CharField(max_length=20, verbose_name='Номер телефона', null=True, blank=True)
-    address = models.CharField(max_length=255, verbose_name='Адрес', null=True, blank=True)
+class Image(models.Model):
+    image = models.ImageField("Изображения для Меню")
 
-    def __str__(self):
-        return "Покупатель: {} {}".format(self.user.first_name, self.user.last_name)
+    class Meta:
+        verbose_name = 'Изображение'
+        verbose_name_plural = 'Изображения'

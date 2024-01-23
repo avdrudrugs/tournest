@@ -1,4 +1,4 @@
-{% load static %}
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>Success</title>
+	<title>{{ sight.sight_name }}</title>
 
 	<!-- Google font -->
 	<link href="{% static 'https://fonts.googleapis.com/css?family=Raleway:400,700' %}" rel="stylesheet">
@@ -26,22 +26,48 @@
 		  <script src="{% static 'https://oss.maxcdn.com/respond/1.4.2/respond.min.js' %}"></script>
 		<![endif]-->
     <style>
-  body {
-  background-image: url(https://w.wallha.com/ws/4/QWSa3hFP.jpg);
+body {
+    background-image: url('{{ sight.image.url }}');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
+
+.shape {
+    position: fixed;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(205, 230, 238, 0.5);
+    border-radius: 30px;
+    text-align: center;
+    padding: 20px
+}
+.shape, h2 {
+    text-align: center
+    font-weight: bold;
+}
+.shape, p{
+    font-weight: bold;
+
+}
+
 
     </style>
 
 </head>
 <body>
-<div class="decor">
+
+<form class="shape">
     {% csrf_token %}
-    <div class="form-left-decoration"></div>
-    <div class="form-right-decoration"></div>
-    <div class="circle"></div>
-    <div class="form-inner">
-        <span>Спасибо за бронь! Менеджер свяжется с вами в ближайшее время.</span>
+        <h2>{{ sight.sight_name }}</h2>
+
+        <p>{{ sight.description }}</p>
         <a type="submit" href="/"><h4>На главную страницу</h4></a>
-    </div>
-</div>
+</form>
 </body>
+</html>

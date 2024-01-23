@@ -11,24 +11,23 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
 from pathlib import Path
+import environ
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+env = environ.Env()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
+environ.Env.read_env(os.path.join(BASE_DIR.parent, ".env"))
+SECRET_KEY = env.str("SECRET_KEY", default="debug-secret-key")
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-49)(g1!dt*gt5g2zvwhcd6)#@owi%2=cs(!q-t3epvtt#q-bz*'
+DEBUG = env.bool("APP_DEBUG", default=False)
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["*"])
 
 # Application definition
 
 INSTALLED_APPS = [
+    "jet.dashboard",
+    "jet",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -36,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tours_kg',
-    'crispy_forms'
+    # 'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -73,10 +72,14 @@ WSGI_APPLICATION = 'tournest.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    "default": {
+        "ENGINE": env.str("DB_ENGINE", default="django.db.backends.postgresql"),
+        "NAME": env.str("POSTGRES_DB", default="lawyer"),
+        "USER": env.str("POSTGRES_USER", default="postgres"),
+        "PASSWORD": env.str("POSTGRES_PASSWORD", default="postgres"),
+        "HOST": env.str("POSTGRES_HOST", default="localhost"),
+        "PORT": env.int("POSTGRES_PORT", default=5432),
+    },
 }
 
 # Password validation

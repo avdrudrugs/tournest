@@ -1,6 +1,6 @@
 from django import forms
-from tours_kg.models import BookNow, Review, JoinUs
-from tours_kg.models import BookNow, Review, User
+from tours_kg.models import JoinUs
+from tours_kg.models import BookNow, Review
 
 
 class BookNowForm(forms.ModelForm):
@@ -12,12 +12,9 @@ class BookNowForm(forms.ModelForm):
             else:
                 field.widget.attrs['class'] = 'form-control'
 
-    # sightseeing = forms.Select(attrs={'class': 'form-control', 'placeholder': 'Выберите Тур'},
-    # choices=BookNow.sightseeing)
-
     class Meta:
         model = BookNow
-        fields = ('__all__')
+        fields = '__all__'
 
 
 class JoinUsForm(forms.ModelForm):
@@ -26,10 +23,7 @@ class JoinUsForm(forms.ModelForm):
 
     class Meta:
         model = JoinUs
-        fields = ('__all__')
-
-
-0
+        fields = '__all__'
 
 
 class ReviewForm(forms.ModelForm):

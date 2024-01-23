@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.db.models import Avg, Count, Func, IntegerField
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
 from django.views.generic import View
 from tours_kg.models import *
@@ -6,21 +7,33 @@ from tours_kg.forms import BookNowForm, JoinUsForm, ReviewForm
 
 
 class BaseView(View):
+
     def get(self, request, *args, **kwargs):
-        regions = Region.objects.all()
-        sights = Sight.objects.all()
+        reviews = Review.objects.all()
+        tours = Sight.objects.annotate(avg_rating=Func(Avg('review__rating'), function="ROUND",
+                                                       output_field=IntegerField()),
+                                       total_reviews=Count('review__rating'))
+        images = Image.objects.all()
         context = {
-            'regions': regions,
-            'sights': sights,
-            # 'books': self.books,
+            'reviews': reviews,
+            "tours": tours,
+            "images": images,
         }
         return render(request, 'index.html', context)
+
+    def post(self, request, *args, **kwargs):
+        join = JoinUsForm
+        email = request.POST['email']
+        all_email = JoinUs(email=email)
+        all_email.save()
+        return render(request, 'index.html', {'join': join})
 
 
 def BookRightNow(request, *args, **kwargs):
     form = BookNowForm
 
     if request.method == 'POST':
+        print(request.POST)
         name = request.POST['name']
         surname = request.POST['surname']
         email = request.POST['email']
@@ -28,14 +41,14 @@ def BookRightNow(request, *args, **kwargs):
         sightseeing = request.POST['sightseeing']
         date = request.POST['date']
         quantity = request.POST['quantity']
-        print(name, email, phone, date)
-        ins = BookNow(name=name, surname=surname, email=email, phone=phone, date=date, sightseeing=sightseeing,
+        ins = BookNow(name=name, surname=surname, email=email, phone=phone, date=date, sightseeing_id=sightseeing,
                       quantity=quantity)
         ins.save()
         if ins.save() == ins.save():
             return HttpResponseRedirect('success/')
         return render(request, 'book.html', {'form': form})
     else:
+
         return render(request, 'book.html', {'form': form})
 
 
@@ -43,33 +56,16 @@ def Success(request):
     return render(request, 'success.html')
 
 
-def JoinUsNow(request, *args, **kwargs):
-    join = JoinUsForm
-    if request.method == 'POST':
-        email = request.POST['email']
-        all_email = JoinUs(email=email)
-        all_email.save()
-        return render(request, 'index.html', {'join': join})
-    else:
-        return render(request, 'index.html', {'join': join})
-
-
-class ReviewView(View):
-    def get(self, request, *args, **kwargs):
-        reviews = Review.objects.all()
-        context = {
-            'review': reviews
-        }
-        return render(request, 'index.html', context)
-
-
-def savecomment(request, *args, **kwargs):
+def save_comment(request, *args, **kwargs):
     form = ReviewForm
 
     if request.method == 'POST':
         name = request.POST['name']
-        reviews = request.POST['reviews']
-        coms = Review(name=name, reviews=reviews)
+        review = request.POST['reviews']
+        rating = request.POST['rating']
+        sight = request.POST['sight']
+        coms = Review(name=name, reviews=review, rating=rating, sight_id=sight)
+
         coms.save()
         if coms.save() == coms.save():
             return HttpResponseRedirect('/')
@@ -77,23 +73,7 @@ def savecomment(request, *args, **kwargs):
     else:
         return render(request, 'index.html', {'form': form})
 
-# def JoinUsNow(request):
-#     # if this is a POST request we need to process the form data
-#     if request.method == 'POST':
-#         # create a form instance and populate it with data from the request:
-#         form_email = JoinUsForm(request.POST)
-#         # check whether it's valid:
-#         if form_email.is_valid():
-#             # process the data in form.cleaned_data as required
-#             # ...
-#             # redirect to a new URL:
-#             return HttpResponseRedirect('/')
-#
-#     # if a GET (or any other method) we'll create a blank form
-#     return render(request, 'index.html', {'form_email': form_email})
 
-
-# if 'service' in request.POST:
-#     service = request.POST['service']
-# else:
-#     service = False
+def sight_detail(request, slug):
+    sight = get_object_or_404(Sight, slug=slug)
+    return render(request, 'sight_detail.html', {'sight': sight})

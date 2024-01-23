@@ -99,12 +99,12 @@
 								</div><!-- /.navbar-header-->
 								<div class="collapse navbar-collapse">
 									<ul class="nav navbar-nav navbar-right">
-                                <li class="smooth-menu"><a href="#home">Главная страница</a></li>
-                                <li class="smooth-menu"><a href="#gallery">Точка назначения </a></li>
-                                <li class="smooth-menu"><a href="#pack">Туры </a></li>
-                                <li class="smooth-menu"><a href="#subs">Отзывы</a></li>
+                                <li class="nav-link text-white"><a href="#home">Главная страница</a></li>
+                                <li class="nav-link text-white"><a href="#gallery">Точка назначения </a></li>
+                                <li class="nav-link text-white"><a href="#pack">Туры </a></li>
+                                <li class="nav-link text-white"><a href="#comments">Отзывы</a></li>
                                 <li>
-                                    <a class="nav-link text-white" href="{% url 'book_now' %}">Забронировать</a>
+                                    <a class="nav-link text-white" href="#subs">Подписаться</a>
                                 </li><!--/.project-btn-->
                            </ul>
                         </div><!-- /.navbar-collapse -->
@@ -132,16 +132,9 @@
 
                             </h2>
                             <div class="about-btn">
-                                <button class="about-view"><a href="#pack"></a>
-                                    Путешествовать!
-                                </button>
+                                <a href="{% url 'book_now' %}" class="about-view">Хочу на тур!</a>
                             </div><!--/.about-btn-->
                         </div><!--/.about-us-txt-->
-                    </div><!--/.single-about-us-->
-                </div><!--/.col-->
-                <div class="col-sm-0">
-                    <div class="single-about-us">
-
                     </div><!--/.single-about-us-->
                 </div><!--/.col-->
             </div><!--/.row-->
@@ -165,11 +158,11 @@
                     </div><!--/.service-img-->
                     <div class="service-content">
                         <h2>
-                            <a href="#">
+                            <a href="">
                                 Тур пакеты
                             </a>
                         </h2>
-                        <p>Ну а как же без вот этих тур пакетов? Скажи мне!</p>
+                        <p>Организовываем туры для компании</p>
                     </div><!--/.service-content-->
                 </div><!--/.single-service-box-->
             </div><!--/.col-->
@@ -181,11 +174,11 @@
                     </div><!--/.service-img-->
                     <div class="service-content">
                         <h2>
-                            <a href="#">
-                                Спите в изысканных юртах кыргызов
+                            <a href="">
+                                Сити туры
                             </a>
                         </h2>
-                        <p>А не вот это все. Ну вы поняли что я имею ввиду.</p>
+                        <p>Для того, чтобы погрузиться и познакомиться с архитектурой бывшего советского государста </p>
                     </div><!--/.service-content-->
                 </div><!--/.single-service-box-->
             </div><!--/.col-->
@@ -198,11 +191,11 @@
                     <div class="service-content">
 
                         <h2>
-                            <a href="#">
-                                Готовьтесь увидеть зрелище!
+                            <a href="">
+                                Качественные услуги
                             </a>
                         </h2>
-                        <p>Ну чтож, добро пожаловать в Кыргызстан мои дорогие!.</p>
+                        <p>Ваш тур начинается с вашего приземления, и длится до вашего вылета.</p>
                     </div><!--/.service-content-->
                 </div><!--/.single-service-box-->
             </div><!--/.col-->
@@ -219,88 +212,41 @@
         <div class="gallery-details">
             <div class="gallary-header text-center">
                 <h2>
-                    Самые лучшие места для посещения.
+                    Кыргызстан – где горы встречают небо, а сердца находят свободу.
                 </h2>
                 <p>
-                    Кыргызстан нам всем известен своими красотами природы и нам лучше поторопиться увидеть все пока не сдохнем!
+                    Добро пожаловать в Кыргызстан - землю величественных гор, изумительных озер и буйных рек,
+                    где каждый уголок земли пронизан необъятной красотой природы. Это уникальное место, где
+                    сливаются воедино горные пейзажи, живописные озера и богатое растительное разнообразие.
+                    Главным символом Кыргызстана является горная система Тянь-Шань, простирающаяся
+                    по всей стране и предлагающая бесчисленные трекинговые маршруты для любителей пеших
+                    походов и альпинистов. Высокогорные вершины Тянь-Шаня, покрытые белым снегом, привлекают
+                    не только профессиональных альпинистов, но и любителей природы, желающих насладиться невероятными
+                    видами и чистым горным воздухом. </p>
+                <p>
+                    Озера Кыргызстана – это настоящие драгоценности среди гор. Иссык-Куль, одно из крупнейших
+                    озер в мире, окруженное горными вершинами, удивляет своей кристальной чистотой и обширными пляжами,
+                    прекрасными для отдыха и водных видов спорта. Сон-Куль, затерянное в горах на высоте более
+                    3 000 метров над уровнем моря, восхищает своей красотой и приглашает познакомиться с кочевой
+                    культурой народа. Каждый уголок Кыргызстана – это уникальное сочетание красоты и аутентичности.
+                    Горные ущелья и долины, реки и озерные берега, заповедники и национальные парки предоставляют
+                    возможность ощутить гармонию с природой, погрузиться в атмосферу уединения и восстановить связь
+                    с окружающим миром. Кыргызстан, известный своим разнообразием флоры и фауны, поражает своей
+                    уникальной природной красотой. От горных степей до вековых лесов, от альпийских лугов до скалистых
+                    хребтов – здесь можно обнаружить множество видов растений и животных, в том числе редких и уникальных.
+                    <p/>
+                <p>
+                    Туристы, приезжающие в Кыргызстан, встречаются с удивительными пейзажами, богатством культурного
+                    наследия и гостеприимством местных жителей. Эта удивительная страна привлекает не только своей
+                    природной красотой, но и возможностью познакомиться с историей, традициями и культурой народа,
+                    который умело сохранил свои уникальные обычаи и образ жизни.
                 </p>
             </div><!--/.gallery-header-->
-            <div class="gallery-box">
-                <div class="gallery-content">
-                    <div class="filtr-container">
-                        <div class="row">
-
-                            <div class="col-md-6">
-                                <div class="filtr-item">
-                                    <img src="static/images/gallary/alamedini.jpg" alt="portfolio image"/>
-                                    <div class="item-title">
-                                        <a href="#">
-                                            Аламединское ущелье
-                                        </a>
-                                    </div><!-- /.item-title -->
-                                </div><!-- /.filtr-item -->
-                            </div><!-- /.col -->
-
-                            <div class="col-md-6">
-                                <div class="filtr-item">
-                                    <img src="static/images/gallary/sarychelek.jpg" alt="portfolio image"/>
-                                    <div class="item-title">
-                                        <a href="#">
-                                            Сары-Челек
-                                        </a>
-                                    </div> <!-- /.item-title-->
-                                </div><!-- /.filtr-item -->
-                            </div><!-- /.col -->
-
-                            <div class="col-md-4">
-                                <div class="filtr-item">
-                                    <img src="static/images/gallary/burana.jpg" alt="portfolio image"/>
-                                    <div class="item-title">
-                                        <a href="#">
-                                            Бурана
-                                        </a>
-                                    </div><!-- /.item-title -->
-                                </div><!-- /.filtr-item -->
-                            </div><!-- /.col -->
-
-                            <div class="col-md-4">
-                                <div class="filtr-item">
-                                    <img src="static/images/gallary/belogorka.png" alt="portfolio image"/>
-                                    <div class="item-title">
-                                        <a href="#">
-                                            Белогорка
-                                        </a>
-                                    </div> <!-- /.item-title-->
-                                </div><!-- /.filtr-item -->
-                            </div><!-- /.col -->
-
-                            <div class="col-md-4">
-                                <div class="filtr-item">
-                                    <img src="static/images/gallary/kegeti.jpg" alt="portfolio image"/>
-                                    <div class="item-title">
-                                        <a href="#">
-                                            Кегети
-                                        </a>
-                                    </div> <!-- /.item-title-->
-                                </div><!-- /.filtr-item -->
-                            </div><!-- /.col -->
-
-                            <div class="col-md-8">
-                                <div class="filtr-item">
-                                    <img src="static/images/gallary/arakol.jpg" alt="portfolio image"/>
-                                    <div class="item-title">
-                                        <a href="#">
-                                            Ара-Кол
-                                        </a>
-                                    </div> <!-- /.item-title-->
-                                </div><!-- /.filtr-item -->
-                            </div><!-- /.col -->
-
-                        </div><!-- /.row -->
-
-                    </div><!-- /.filtr-container-->
-                </div><!-- /.gallery-content -->
-            </div><!--/.galley-box-->
+            <div class="image-container">
+                    {% for image in images %}
+                <img src="{{ image.image.url }}" alt="{{ image.title }}">
+                {% endfor %}
+            </div>
         </div><!--/.gallery-details-->
     </div><!--/.container-->
 
@@ -319,235 +265,56 @@
             <h2>
                 Специальные туры
             </h2>
-            <p>
-                Кыргызстан нам всем известен своими красотами природы и нам лучше поторопиться увидеть все пока не сдохнем!
-            </p>
         </div><!--/.gallery-header-->
         <div class="packages-content">
             <div class="row">
-
+                {% for tour in tours %}
                 <div class="col-md-4 col-sm-6">
                     <div class="single-package-item">
-                        <img src="static/images/packages/arakol.jpg" alt="package-place">
+                        {% if tour.image %}
+                        <img src="{{ tour.image.url }}" alt="package-place">
+                        {% else %}
+                        <p>No Image Available</p>
+                        {% endif %}
                         <div class="single-package-item-txt">
-                            <h3>Ара-Кол <span class="pull-right">1000 сом</span></h3>
+                            <a href="{% url 'sight_detail' tour.slug %}">
+                            <h3>{{ tour.sight_name }}</h3>
+                            </a>
                             <div class="packages-para">
                                 <p>
-											<span>
-												<i class="fa fa-angle-right"></i> 1 день
-											</span>
+                                    <span>
+                                        <b>Количество дней:</b> {{ tour.duration_days }}
+                                    </span>
                                 </p>
                                 <p>
-											<span>
-												<i class="fa fa-angle-right"></i>  Транспортировка
-											</span>
-                                    <i class="fa fa-angle-right"></i> Тамак аш
+                                    <span>
+                                        <b>Место:</b> {{tour.province}}
+                                    </span>
+                                </p>
+                                <p>
+                                    <span>
+                                        <b>Цена:</b> {{tour.price}} {{tour.currency_type}}
+                                    </span>
+                                </p>
+                                <p>
+                                    <span><b>Количество отзывов:</b> {{ tour.total_reviews }} </span>
                                 </p>
                             </div><!--/.packages-para-->
-                            <div class="packages-review">
-                                <p>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <span>5 отзывов</span>
-                                </p>
-                            </div><!--/.packages-review-->
+                                <div class="star-rating" data-rating="{{ tour.avg_rating }}">
+                                  <span class="fa fa-star"></span>
+                                  <span class="fa fa-star"></span>
+                                  <span class="fa fa-star"></span>
+                                  <span class="fa fa-star"></span>
+                                  <span class="fa fa-star"></span>
+                                </div>
                             <div class="about-btn">
                                 <button>
                                     <a class="nav-link text-white" href="{% url 'book_now' %}"> Забронировать </a></button>
                             </div><!--/.about-btn-->
                         </div><!--/.single-package-item-txt-->
                     </div><!--/.single-package-item-->
-
                 </div><!--/.col-->
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-package-item">
-                        <img src="static/images/packages/каракол_гб.jpg" alt="package-place">
-                        <div class="single-package-item-txt">
-                            <h3>Горнолыжная база Каракол <span class="pull-right">$89</span></h3>
-                            <div class="packages-para">
-                                <p>
-											<span>
-												<i class="fa fa-angle-right"></i> 3 дня
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-angle-right"></i>  Транспортировка
-											</span>
-                                    <i class="fa fa-angle-right"></i> Тамак аш
-                                </p>
-                            </div><!--/.packages-para-->
-                            <div class="packages-review">
-                                <p>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <span>3 отзыва</span>
-                                </p>
-                            </div><!--/.packages-review-->
-                            <div class="about-btn">
-                                <button>
-                                    <a class="nav-link text-white" href="{% url 'book_now' %}"> Забронировать </a></button>
-                            </div><!--/.about-btn-->
-                        </div><!--/.single-package-item-txt-->
-                    </div><!--/.single-package-item-->
-
-                </div><!--/.col-->
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-package-item">
-                        <img src="/static/images/packages/келсуу.jpg" alt="package-place">
-                        <div class="single-package-item-txt">
-                            <h3>Кел-Суу <span class="pull-right">$199</span></h3>
-                            <div class="packages-para">
-                                <p>
-											<span>
-												<i class="fa fa-angle-right"></i> 4 дня
-                                            </span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-angle-right"></i>  Транспортировка
-											</span>
-                                    <i class="fa fa-angle-right"></i> Тамак аш
-                                </p>
-                            </div><!--/.packages-para-->
-                            <div class="packages-review">
-                                <p>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <span>4 отзыва</span>
-                                </p>
-                            </div><!--/.packages-review-->
-                            <div class="about-btn">
-                                <button>
-                                    <a class="nav-link text-white" href="{% url 'book_now' %}"> Забронировать </a></button>
-                            </div><!--/.about-btn-->
-                        </div><!--/.single-package-item-txt-->
-                    </div><!--/.single-package-item-->
-
-                </div><!--/.col-->
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-package-item">
-                        <img src="/static/images/packages/issyk-kul-north1.jpg" alt="package-place">
-                        <div class="single-package-item-txt">
-                            <h3>Иссык-Куль <span class="pull-right">$205</span></h3>
-                            <div class="packages-para">
-                                <p>
-											<span>
-												<i class="fa fa-angle-right"></i> 5 дней
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-angle-right"></i>  Транспортировка
-											</span>
-                                    <i class="fa fa-angle-right"></i> Тамак аш
-                                </p>
-                            </div><!--/.packages-para-->
-                            <div class="packages-review">
-                                <p>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <span>11 отзывов</span>
-                                </p>
-                            </div><!--/.packages-review-->
-                            <div class="about-btn">
-                                <button>
-                                    <a class="nav-link text-white" href="{% url 'book_now' %}"> Забронировать </a></button>
-                            </div><!--/.about-btn-->
-                        </div><!--/.single-package-item-txt-->
-                    </div><!--/.single-package-item-->
-
-                </div><!--/.col-->
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-package-item">
-                        <img src="/static/images/packages/sary-chelek11.jpg" alt="package-place">
-                        <div class="single-package-item-txt">
-                            <h3>Сары-Челек <span class="pull-right">$99</span></h3>
-                            <div class="packages-para">
-                                <p>
-											<span>
-												<i class="fa fa-angle-right"></i> 3 дня
-											</span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-angle-right"></i>  Транспортировка
-											</span>
-                                    <i class="fa fa-angle-right"></i> Тамак аш
-                                </p>
-                            </div><!--/.packages-para-->
-                            <div class="packages-review">
-                                <p>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <span>23 отзывов</span>
-                                </p>
-                            </div><!--/.packages-review-->
-                            <div class="about-btn">
-                                <button>
-                                    <a class="nav-link text-white" href="{% url 'book_now' %}"> Забронировать </a></button>
-                            </div><!--/.about-btn-->
-                        </div><!--/.single-package-item-txt-->
-                    </div><!--/.single-package-item-->
-
-                </div><!--/.col-->
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-package-item">
-                        <img src="static/images/packages/kegeti.jpg" alt="package-place">
-                        <div class="single-package-item-txt">
-                            <h3>Кегети <span class="pull-right">800 сом</span></h3>
-                            <div class="packages-para">
-                                <p>
-											<span>
-												<i class="fa fa-angle-right"></i> 1 день
-                                            </span>
-                                </p>
-                                <p>
-											<span>
-												<i class="fa fa-angle-right"></i>  Транспортировка
-											</span>
-                                    <i class="fa fa-angle-right"></i> Тамак аш
-                                </p>
-                            </div><!--/.packages-para-->
-                            <div class="packages-review">
-                                <p>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <span>19 отзывов</span>
-                                </p>
-                            </div><!--/.packages-review-->
-                            <div class="about-btn">
-                                <button>
-                                    <a class="nav-link text-white" href="{% url 'book_now' %}"> Забронировать </a></button>
-                            </div><!--/.about-btn-->
-                        </div><!--/.single-package-item-txt-->
-                    </div><!--/.single-package-item-->
-
-                </div><!--/.col-->
-
+                {% endfor %}
             </div><!--/.row-->
         </div><!--/.packages-content-->
     </div><!--/.container-->
@@ -556,7 +323,7 @@
 <!--packages end-->
 
 <!-- testemonial Start -->
-<section class="testemonial">
+<section class="testemonial" id="comments">
     <div class="container">
 
         <div class="gallary-header text-center">
@@ -571,7 +338,7 @@
             <div class="home1-testm item">
                 <div class="home1-testm-single text-center">
                     <div class="home1-testm-img">
-                        <img src="{% static '/images/client/33.jpeg' %}" alt="img"/>
+                        <img src="{% static '/images/client/images.png' %}" alt="img"/>
                     </div><!--/.home1-testm-img-->
                     <div class="home1-testm-txt">
 								<span class="icon section-icon">
@@ -581,10 +348,17 @@
                             {{ review.reviews | truncatewords_html:15 | safe }}
                         </p>
                         <h3>
-                            <a href="#">
+                            <a>
                                 {{ review.name }}
                             </a>
                         </h3>
+                        <div class="star-rating" data-rating="{{ review.rating }}">
+                                  <span class="fa fa-star"></span>
+                                  <span class="fa fa-star"></span>
+                                  <span class="fa fa-star"></span>
+                                  <span class="fa fa-star"></span>
+                                  <span class="fa fa-star"></span>
+                                </div>
                     </div><!--/.home1-testm-txt-->
                 </div><!--/.home1-testm-single-->
             </div><!--/.item-->
@@ -593,33 +367,58 @@
 
 
     </div><!--/.testemonial-carousel-->
-    </div><!--/.container-->
 
 </section><!--/.testimonial-->
-<div class="container mt-5">
-    <div class="d-flex justify-content-center row">
-        <div class="col-md-8">
-            <h4>Здесь вы можете оставить свой отзыв.</h4>
-            <div class="d-flex flex-column comment-section">
-                <div class="bg-light p-2">
+
+<section class="testemonial_write" id="write-comments">
+    <div class="container">
+    <div class="container mt-5">
+        <div class="d-flex justify-content-center row">
+            <div class="col-md-8">
+                <div class="d-flex flex-column comment-section">
                     <form action="{% url 'save' %}" method="POST">
                         {% csrf_token %}
-                        <div>
-                            <p><b>Ваше имя:</b><br><input type="text" name=name id="name" size="40"></p>
-                            <textarea class="form-control ml-1 shadow-none textarea" name="reviews"
-                                      id="reviews"></textarea>
-                            <div class="form-btn">
-                                <button class="appsLand-btn subscribe-btn">Отправить!</button>
-                            </div>
+                        <h2 style="text-transform: none;"> Здесь вы можете оставить свой отзыв.</h2>
+                    <div>
+                        <label for="sight">Выберите тур:</label><br>
+                            <select name="sight" id="sight" class="form-select mb-3">>
+                                {% for tour in tours %}
+                                    <option value="{{ tour.id }}">{{ tour.sight_name }}</option>
+                                {% endfor %}
+                            </select>
                         </div>
-                    </form>
+                        <div class="bg-light p-2">
+                            <div class="mb-3"> <!-- Добавлен отступ mb-3 для блока с именем -->
+                                <label for="name" class="form-label">Ваше имя:</label>
+                                <input type="text" name="name" id="name" required class="form-control">
+                            </div>
+                            <div class="mb-3"> <!-- Добавлен отступ mb-3 для блока с отзывом -->
+                                <label for="reviews" class="form-label">Ваш отзыв:</label>
+                                <textarea class="form-control" name="reviews" id="reviews" required></textarea>
+                            </div>
+                                <div class="rating-star">
+                                    <input type="radio" id="star5" name="rating" value="5" required>
+                                    <label for="star5" title="5 stars"></label>
+                                    <input type="radio" id="star4" name="rating" value="4" required>
+                                    <label for="star4" title="4 stars"></label>
+                                    <input type="radio" id="star3" name="rating" value="3" required>
+                                    <label for="star3" title="3 stars"></label>
+                                    <input type="radio" id="star2" name="rating" value="2" required>
+                                    <label for="star2" title="2 stars"></label>
+                                    <input type="radio" id="star1" name="rating" value="1" required>
+                                    <label for="star1" title="1 star"></label>
+                                </div>
+                                <div class="form-btn">
+                                    <button class="appsLand-btn subscribe-btn">Отправить!</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
     </div>
-</div>
-
+</section>
 <!-- testemonial End -->
 
 
@@ -638,7 +437,7 @@
                 Подпишитесь сейчас. Мы вышлем вам лучшее предложение для вашей поездки
             </p>
         </div>
-        <form class="row" action="{% url 'join-us'%}" method="POST">
+        <form class="row" method="POST">
                 {% csrf_token %}
                 <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
                     <div class="custom-input-group">
@@ -658,64 +457,6 @@
 <!-- footer-copyright start -->
 <footer class="footer-copyright">
     <div class="container">
-        <div class="footer-content">
-            <div class="row">
-
-                <div class="col-sm-3">
-                    <div class="single-footer-item">
-                        <div class="footer-logo">
-                            <a href="#">
-                                tour<span>Nest</span>
-                            </a>
-                            <p>
-                                Самое лучшее агенство
-                            </p>
-                        </div>
-                    </div><!--/.single-footer-item-->
-                </div><!--/.col-->
-
-                <div class="col-sm-3">
-                    <div class="single-footer-item">
-                        <h2>Ссылки</h2>
-                        <div class="single-footer-txt">
-                            <p><a href="#">Главная страница</a></p>
-                            <p><a href="#">Точка назначения</a></p>
-                            <p><a href="#">Туры</a></p>
-                            <p><a href="#">Блог</a></p>
-                            <p><a href="#">Контакты</a></p>
-                        </div><!--/.single-footer-txt-->
-                    </div><!--/.single-footer-item-->
-
-                </div><!--/.col-->
-
-                <div class="col-sm-3">
-                    <div class="single-footer-item">
-                        <h2>Популярные места</h2>
-                        <div class="single-footer-txt">
-                            <p><a href="#">Ыссык-Куль</a></p>
-                            <p><a href="#">Сары-Челек</a></p>
-                            <p><a href="#">Бурана</a></p>
-                            <p><a href="#">Ара-коль</a></p>
-                            <p><a href="#">Сулайман-Тоо</a></p>
-                        </div><!--/.single-footer-txt-->
-                    </div><!--/.single-footer-item-->
-                </div><!--/.col-->
-
-                <div class="col-sm-3">
-                    <div class="single-footer-item text-center">
-                        <h2 class="text-left">Контакты</h2>
-                        <div class="single-footer-txt text-left">
-                            <p>+996 502 334 335</p>
-                            <p class="foot-email"><a href="#">tournest@gmail.com</a></p>
-                            <p>Раззакова 32</p>
-                            <p>Бишкек</p>
-                        </div><!--/.single-footer-txt-->
-                    </div><!--/.single-footer-item-->
-                </div><!--/.col-->
-
-            </div><!--/.row-->
-
-        </div><!--/.footer-content-->
         <hr>
         <div class="foot-icons">
             <ul class="footer-social-links list-inline list-unstyled">
